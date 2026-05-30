@@ -33,21 +33,43 @@ export default function ContactPage() {
           <div className="grid lg:grid-cols-5 gap-10">
             {/* Contact info */}
             <div className="lg:col-span-2 space-y-6">
-              {[
-                { icon: Mail, label: "Email Us", value: "hello@hostelsdudes.in", href: "mailto:hello@hostelsdudes.in", color: "bg-blue-100 text-blue-600" },
-                { icon: Phone, label: "Call Us", value: "+91 88000 00000", href: "tel:+918800000000", color: "bg-green-100 text-green-600" },
-                { icon: MapPin, label: "Our Office", value: "Koregaon Park, Pune 411001", href: "#", color: "bg-orange-100 text-orange-600" },
-              ].map(({ icon: Icon, label, value, href, color }) => (
-                <a key={label} href={href} className="flex items-start gap-4 bg-white rounded-2xl p-5 shadow-card border border-slate-100 hover:border-blue-200 transition-colors group">
-                  <div className={`w-12 h-12 ${color} rounded-xl flex items-center justify-center flex-shrink-0`}>
-                    <Icon className="w-5 h-5" />
+              {/* Email Us */}
+              <a href="mailto:hello@hostelsdudes.in" className="flex items-start gap-4 bg-white rounded-2xl p-5 shadow-card border border-slate-100 hover:border-blue-200 transition-colors group">
+                <div className="w-12 h-12 bg-blue-100 text-blue-600 rounded-xl flex items-center justify-center flex-shrink-0">
+                  <Mail className="w-5 h-5" />
+                </div>
+                <div>
+                  <p className="text-slate-400 text-xs font-medium">Email Us</p>
+                  <p className="font-semibold text-slate-800 group-hover:text-blue-600 transition-colors mt-0.5">hello@hostelsdudes.in</p>
+                </div>
+              </a>
+
+              {/* WhatsApp Us */}
+              <div className="bg-white rounded-2xl p-5 shadow-card border border-slate-100">
+                <div className="flex items-start gap-4">
+                  <div className="w-12 h-12 bg-green-100 text-green-600 rounded-xl flex items-center justify-center flex-shrink-0">
+                    <Phone className="w-5 h-5" />
                   </div>
                   <div>
-                    <p className="text-slate-400 text-xs font-medium">{label}</p>
-                    <p className="font-semibold text-slate-800 group-hover:text-blue-600 transition-colors mt-0.5">{value}</p>
+                    <p className="text-slate-400 text-xs font-medium">Contact Us (WhatsApp)</p>
+                    <div className="flex flex-col gap-2 mt-1.5">
+                      <a href="https://wa.me/918506021056?text=can%20i%20get%20info" target="_blank" rel="noopener noreferrer" className="text-sm font-semibold text-slate-700 hover:text-blue-600 transition-colors">+91 85060 21056</a>
+                      <a href="https://wa.me/918826687134?text=can%20i%20get%20info" target="_blank" rel="noopener noreferrer" className="text-sm font-semibold text-slate-700 hover:text-blue-600 transition-colors">+91 88266 87134</a>
+                    </div>
                   </div>
-                </a>
-              ))}
+                </div>
+              </div>
+
+              {/* Our Office */}
+              <div className="flex items-start gap-4 bg-white rounded-2xl p-5 shadow-card border border-slate-100">
+                <div className="w-12 h-12 bg-orange-100 text-orange-600 rounded-xl flex items-center justify-center flex-shrink-0">
+                  <MapPin className="w-5 h-5" />
+                </div>
+                <div>
+                  <p className="text-slate-400 text-xs font-medium">Our Office</p>
+                  <p className="font-semibold text-slate-800 mt-0.5">Sector 62, Noida 201301</p>
+                </div>
+              </div>
 
               <div className="bg-gradient-to-br from-blue-600 to-indigo-600 rounded-2xl p-6 text-white">
                 <h3 className="font-display font-bold text-lg mb-2">Support Hours</h3>

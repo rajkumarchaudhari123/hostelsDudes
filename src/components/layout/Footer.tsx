@@ -93,11 +93,14 @@ export default function Footer() {
             <ul className="space-y-3">
               <li className="flex items-start gap-3">
                 <MapPin className="w-4 h-4 mt-0.5 text-blue-400 flex-shrink-0" />
-                <span className="text-sm text-slate-400">Hostel Dudes HQ, Koregaon Park, Pune 411001</span>
+                <span className="text-sm text-slate-400">Hostel Dudes HQ, Sector 62, Noida 201301</span>
               </li>
-              <li className="flex items-center gap-3">
-                <Phone className="w-4 h-4 text-blue-400 flex-shrink-0" />
-                <a href="tel:+918800000000" className="text-sm text-slate-400 hover:text-white transition-colors">+91 88000 00000</a>
+              <li className="flex items-start gap-3">
+                <Phone className="w-4 h-4 mt-1 text-blue-400 flex-shrink-0" />
+                <div className="flex flex-col gap-1">
+                  <a href="https://wa.me/918506021056?text=can%20i%20get%20info" target="_blank" rel="noopener noreferrer" className="text-sm text-slate-400 hover:text-white transition-colors">+91 85060 21056 (WhatsApp)</a>
+                  <a href="https://wa.me/918826687134?text=can%20i%20get%20info" target="_blank" rel="noopener noreferrer" className="text-sm text-slate-400 hover:text-white transition-colors">+91 88266 87134 (WhatsApp)</a>
+                </div>
               </li>
               <li className="flex items-center gap-3">
                 <Mail className="w-4 h-4 text-blue-400 flex-shrink-0" />
