@@ -16,7 +16,7 @@ const STATS = [
 ];
 
 const FLOAT_CARDS = [
-  { top: "15%", left: "5%", text: "WiFi Included", icon: "📶" },
+  { top: "15%", left: "5%", text: "₹100 PG Site Visit Charge", icon: "🏠" },
   { top: "15%", right: "5%", text: "Verified Listing", icon: "✅" },
   { bottom: "25%", left: "3%", text: "₹6,500/month", icon: "💰" },
   { bottom: "25%", right: "3%", text: "4.9 Rating", icon: "⭐" },
@@ -197,7 +197,7 @@ export default function HeroSection() {
             {/* Popular Searches */}
             <div className="flex flex-wrap items-center gap-2 px-3 pb-2 pt-1">
               <span className="text-white/50 text-xs">Popular:</span>
-              {["IIT Bombay", "VIT Vellore", "Pune University", "BITS Pilani"].map((item) => (
+              {["Amity University", "Sharda University", "Galgotias University", "Bennett University"].map((item) => (
                 <button
                   key={item}
                   onClick={() => { setSearchType("college"); setQuery(item); }}
