@@ -45,17 +45,17 @@ export default function AboutPage() {
                 </p>
               </div>
               <div className="grid grid-cols-2 gap-4">
-                {[
-                  { value: "2021", label: "Founded" },
-                  { value: "12,000+", label: "Verified PGs" },
-                  { value: "50,000+", label: "Students Helped" },
-                  { value: "80+", label: "Cities" },
-                ].map(({ value, label }) => (
-                  <div key={label} className="bg-gradient-to-br from-blue-50 to-indigo-50 rounded-2xl p-6 text-center border border-blue-100">
-                    <p className="font-display font-bold text-3xl text-blue-600">{value}</p>
-                    <p className="text-slate-500 text-sm mt-1">{label}</p>
-                  </div>
-                ))}
+              {[
+                { value: "2026", label: "Founded" },
+                { value: "Real PGs", label: "Verified" },
+                { value: "Dedicated", label: "Support" },
+                { value: "2", label: "Cities Covered" },
+              ].map(({ value, label }) => (
+                <div key={label} className="bg-gradient-to-br from-blue-50 to-indigo-50 rounded-2xl p-6 text-center border border-blue-100">
+                  <p className="font-display font-bold text-2xl text-blue-600 truncate">{value}</p>
+                  <p className="text-slate-500 text-xs mt-1 truncate">{label}</p>
+                </div>
+              ))}
               </div>
             </div>
           </div>
@@ -87,12 +87,11 @@ export default function AboutPage() {
         <section className="py-20 bg-white">
           <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <h2 className="font-display font-bold text-4xl text-slate-900 mb-14">Built by Students, for Students</h2>
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 max-w-4xl mx-auto">
               {[
-                { name: "Arjun Verma", role: "CEO & Co-founder", emoji: "👨‍💻" },
-                { name: "Neha Sharma", role: "CTO & Co-founder", emoji: "👩‍💻" },
-                { name: "Rahul Gupta", role: "Head of Product", emoji: "👨‍🎨" },
-                { name: "Priya Nair", role: "Head of Ops", emoji: "👩‍💼" },
+                { name: "Himanshu Sharma", role: "CEO & Co-founder", emoji: "👨‍💻" },
+                { name: "Harish", role: "Co-founder", emoji: "👨‍💻" },
+                { name: "Rajkumar Chaudhari", role: "CTO & Co-founder", emoji: "👨‍💻" },
               ].map(({ name, role, emoji }) => (
                 <div key={name} className="bg-slate-50 rounded-2xl p-6 text-center">
                   <div className="text-5xl mb-4">{emoji}</div>

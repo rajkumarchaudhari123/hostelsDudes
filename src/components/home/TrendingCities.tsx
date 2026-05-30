@@ -5,12 +5,8 @@ import Link from "next/link";
 import { MapPin, ArrowRight } from "lucide-react";
 
 const CITIES = [
-  { name: "Pune", slug: "pune", state: "Maharashtra", pgCount: 2840, image: "https://images.unsplash.com/photo-1567157577867-05ccb1388e66?w=600&auto=format&fit=crop&q=60", color: "from-blue-600 to-blue-800" },
-  { name: "Bangalore", slug: "bangalore", state: "Karnataka", pgCount: 4120, image: "https://images.unsplash.com/photo-1596176530529-78163a4f7af2?w=600&auto=format&fit=crop&q=60", color: "from-purple-600 to-purple-800" },
-  { name: "Mumbai", slug: "mumbai", state: "Maharashtra", pgCount: 3560, image: "https://images.unsplash.com/photo-1566552881560-0be862a7c445?w=600&auto=format&fit=crop&q=60", color: "from-cyan-600 to-cyan-800" },
-  { name: "Delhi", slug: "delhi", state: "Delhi NCR", pgCount: 5230, image: "https://images.unsplash.com/photo-1587474260584-136574528ed5?w=600&auto=format&fit=crop&q=60", color: "from-red-600 to-red-800" },
-  { name: "Hyderabad", slug: "hyderabad", state: "Telangana", pgCount: 2190, image: "https://images.unsplash.com/photo-1588416936097-41850ab3d86d?w=600&auto=format&fit=crop&q=60", color: "from-orange-600 to-orange-800" },
-  { name: "Chennai", slug: "chennai", state: "Tamil Nadu", pgCount: 1870, image: "https://images.unsplash.com/photo-1582510003544-4d00b7f74220?w=600&auto=format&fit=crop&q=60", color: "from-teal-600 to-teal-800" },
+  { name: "Noida", slug: "noida", state: "Uttar Pradesh", pgCount: 12, image: "https://images.unsplash.com/photo-1661858435242-ed971767e954?q=80&w=661&auto=format&fit=crop", color: "from-blue-600 to-blue-800" },
+  { name: "Greater Noida", slug: "greater-noida", state: "Uttar Pradesh", pgCount: 8, image: "https://images.unsplash.com/photo-1709015653284-1c121cf92ddf?q=80&w=1228&auto=format&fit=crop", color: "from-purple-600 to-purple-800" },
 ];
 
 export default function TrendingCities() {
@@ -32,7 +28,7 @@ export default function TrendingCities() {
               Trending Cities for Students
             </h2>
             <p className="text-slate-500 mt-2">
-              Thousands of PGs available in India&apos;s top student cities
+              Explore real PGs and hostels in Noida and Greater Noida
             </p>
           </div>
           <Link
@@ -45,7 +41,7 @@ export default function TrendingCities() {
         </motion.div>
 
         {/* City Grid */}
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 max-w-2xl mx-auto">
           {CITIES.map((city, i) => (
             <motion.div
               key={city.slug}

@@ -6,13 +6,13 @@ import { motion } from "framer-motion";
 import { Search, MapPin, GraduationCap, Building2, Sparkles, Shield, Star, Users } from "lucide-react";
 import { buildQueryString } from "@/utils";
 
-const ROTATING_CITIES = ["Pune", "Bangalore", "Mumbai", "Delhi", "Hyderabad", "Chennai"];
+const ROTATING_CITIES = ["Noida", "Greater Noida"];
 
 const STATS = [
-  { label: "Verified PGs", value: "12,000+", icon: Building2 },
-  { label: "Happy Students", value: "50,000+", icon: Users },
-  { label: "Cities", value: "80+", icon: MapPin },
-  { label: "Avg Rating", value: "4.8★", icon: Star },
+  { label: "Verified PGs", value: "Real PGs", icon: Building2 },
+  { label: "Dedicated Help", value: "Student-First", icon: Users },
+  { label: "Areas Covered", value: "Noida & Greater Noida", icon: MapPin },
+  { label: "Service Support", value: "24/7 Live", icon: Star },
 ];
 
 const FLOAT_CARDS = [
@@ -119,11 +119,10 @@ export default function HeroSection() {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="text-lg text-white/75 mb-10 leading-relaxed"
           >
-            12,000+ verified PGs in{" "}
+            Verified PGs in{" "}
             <span className="text-cyan-400 font-semibold inline-block min-w-[80px]">
               {ROTATING_CITIES[cityIndex]}
-            </span>{" "}
-            and 80+ cities across India
+            </span>
           </motion.p>
 
           {/* Search Card */}
@@ -219,8 +218,8 @@ export default function HeroSection() {
           >
             {[
               { icon: Shield, text: "Verified Listings" },
-              { icon: Star, text: "4.8/5 Avg Rating" },
-              { icon: MapPin, text: "80+ Cities" },
+              { icon: Star, text: "Top Rated Support" },
+              { icon: MapPin, text: "Noida & Greater Noida" },
             ].map(({ icon: Icon, text }) => (
               <div key={text} className="flex items-center gap-2 text-white/60">
                 <Icon className="w-4 h-4 text-cyan-400" />

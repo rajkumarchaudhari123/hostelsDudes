@@ -25,7 +25,7 @@ export default function Testimonials() {
             What Students Are Saying
           </h2>
           <p className="text-slate-500 mt-3 max-w-lg mx-auto">
-            Join 50,000+ students who found their dream PG through StayNest
+            Discover how students found their dream PG through Hostel Dudes
           </p>
         </motion.div>
 
@@ -70,26 +70,7 @@ export default function Testimonials() {
           ))}
         </div>
 
-        {/* Trust bar */}
-        <motion.div
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          viewport={{ once: true }}
-          className="flex flex-wrap items-center justify-center gap-8 pt-8 border-t border-slate-100"
-        >
-          {[
-            { label: "Average Rating", value: "4.8/5", note: "from 12K+ reviews" },
-            { label: "Students Helped", value: "50,000+", note: "across India" },
-            { label: "PG Owners", value: "3,200+", note: "verified & trusted" },
-            { label: "Cities Covered", value: "80+", note: "and growing" },
-          ].map(({ label, value, note }) => (
-            <div key={label} className="text-center">
-              <div className="font-display font-bold text-2xl text-blue-600">{value}</div>
-              <div className="text-sm font-semibold text-slate-700 mt-0.5">{label}</div>
-              <div className="text-xs text-slate-400">{note}</div>
-            </div>
-          ))}
-        </motion.div>
+        {/* Stats removed */}
       </div>
     </section>
   );
