@@ -306,6 +306,20 @@ export default function SearchPage() {
 
             {/* Results */}
             <div className="flex-1 min-w-0">
+              {/* Highly Prominent Visit Charge Banner */}
+              <div className="bg-gradient-to-r from-orange-500 via-amber-500 to-orange-600 text-white py-3 px-4 rounded-2xl mb-6 flex items-center justify-between gap-3 shadow-md border border-orange-400/20">
+                <div className="flex items-center gap-2.5">
+                  <span className="text-xl animate-pulse">🏠</span>
+                  <div>
+                    <h4 className="font-bold text-xs sm:text-sm">₹100 PG Site Visit Charge Only</h4>
+                    <p className="text-white/90 text-[10px] sm:text-xs">Accompanying guided visits with our official Hostel Dudes executive.</p>
+                  </div>
+                </div>
+                <span className="hidden md:inline-block text-[10px] bg-white/20 border border-white/30 px-3 py-1 rounded-full font-bold uppercase tracking-wider">
+                  Verified PGs
+                </span>
+              </div>
+
               {viewMode === "map" ? (
                 <div className="bg-slate-200 rounded-2xl h-[600px] flex items-center justify-center">
                   <div className="text-center">

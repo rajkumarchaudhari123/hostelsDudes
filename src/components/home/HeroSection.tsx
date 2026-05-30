@@ -83,16 +83,27 @@ export default function HeroSection() {
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-28 pb-20 w-full">
         <div className="max-w-3xl mx-auto text-center">
-          {/* Badge */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5 }}
-            className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm border border-white/20 px-4 py-2 rounded-full mb-8"
-          >
-            <Sparkles className="w-4 h-4 text-yellow-400" />
-            <span className="text-sm text-white/90 font-medium">India&apos;s #1 PG Finder Platform</span>
-          </motion.div>
+          {/* Badges */}
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-3 mb-8">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5 }}
+              className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm border border-white/20 px-4 py-2 rounded-full"
+            >
+              <Sparkles className="w-4 h-4 text-yellow-400" />
+              <span className="text-sm text-white/90 font-medium">India&apos;s #1 PG Finder Platform</span>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.1 }}
+              className="inline-flex items-center gap-2 bg-gradient-to-r from-orange-500 to-amber-500 border border-orange-400/30 px-4 py-2 rounded-full shadow-lg"
+            >
+              <span className="text-sm text-white font-bold">🏠 ₹100 PG Site Visit Charge</span>
+            </motion.div>
+          </div>
 
           {/* Headline */}
           <motion.h1
@@ -130,8 +141,16 @@ export default function HeroSection() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.3 }}
-            className="glass rounded-3xl p-2 shadow-[0_20px_80px_rgba(0,0,0,0.3)]"
+            className="glass rounded-3xl p-3 shadow-[0_20px_80px_rgba(0,0,0,0.3)]"
           >
+            {/* Highly Prominent Mobile & Desktop Banner */}
+            <div className="bg-gradient-to-r from-orange-500 via-amber-500 to-orange-600 text-white py-2.5 px-4 rounded-2xl mb-3 flex items-center justify-center gap-2 shadow-lg border border-orange-400/20">
+              <span className="text-base animate-pulse">🏠</span>
+              <span className="text-xs sm:text-sm font-black tracking-wide uppercase">
+                ₹100 PG Site Visit Charge Only
+              </span>
+            </div>
+
             {/* Search Type Tabs */}
             <div className="flex gap-1 p-1 bg-white/5 rounded-2xl mb-2">
               {(["college", "city", "area"] as const).map((type) => (

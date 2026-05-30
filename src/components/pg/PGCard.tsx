@@ -157,7 +157,7 @@ export default function PGCard({
             )}
 
             {/* Badges */}
-            <div className="absolute top-3 left-3 flex flex-wrap gap-1.5">
+            <div className="absolute top-3 left-3 flex flex-wrap gap-1.5 max-w-[85%]">
               {pg.verified && (
                 <span className="flex items-center gap-1 bg-green-500 text-white text-xs px-2 py-1 rounded-lg font-semibold">
                   <CheckCircle2 className="w-3 h-3" />
@@ -171,6 +171,9 @@ export default function PGCard({
               )}
               <span className={cn("badge text-xs", GENDER_COLORS[pg.gender])}>
                 {genderLabel(pg.gender)}
+              </span>
+              <span className="flex items-center gap-1 bg-gradient-to-r from-orange-500 to-amber-500 text-white text-[10px] sm:text-xs px-2 py-1 rounded-lg font-bold shadow-sm border border-orange-400/20">
+                🏠 ₹100 Visit Charge
               </span>
             </div>
 
