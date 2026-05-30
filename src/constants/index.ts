@@ -87,15 +87,15 @@ export const TESTIMONIALS = [
   {
     id: 1,
     name: "Priya Sharma",
-    college: "MIT, Pune",
-    text: "Found my perfect PG within 2 days of searching on StayNest. The verified listings gave me confidence, and the map feature helped me choose one that was just 5 mins from college!",
+    college: "Amity University, Noida",
+    text: "Found my perfect PG within 2 days of searching on Hostel Dudes. The verified listings gave me confidence, and the map feature helped me choose one that was just 5 mins from college!",
     rating: 5,
     avatar: "/testimonials/priya.jpg",
   },
   {
     id: 2,
     name: "Rohan Mehta",
-    college: "BITS Pilani",
+    college: "Sharda University, Greater Noida",
     text: "The filter system is incredible — I could filter by food, AC, budget, and gender all at once. Saved me hours of searching. Highly recommend to every student!",
     rating: 5,
     avatar: "/testimonials/rohan.jpg",
@@ -103,8 +103,8 @@ export const TESTIMONIALS = [
   {
     id: 3,
     name: "Anjali Nair",
-    college: "IIT Bombay",
-    text: "The owner was super responsive through the chat feature. I scheduled a visit directly from the app and moved in within a week. StayNest made the whole process seamless.",
+    college: "Galgotias University, Greater Noida",
+    text: "The owner was super responsive through the chat feature. I scheduled a visit directly from the app and moved in within a week. Hostel Dudes made the whole process seamless.",
     rating: 5,
     avatar: "/testimonials/anjali.jpg",
   },
@@ -113,7 +113,7 @@ export const TESTIMONIALS = [
 export const FAQS = [
   {
     q: "How do I search for PGs near my college?",
-    a: "Simply enter your college name or area in the search bar on the homepage. StayNest will show all verified PGs nearby with distance, price, and amenity filters.",
+    a: "Simply enter your college name or area in the search bar on the homepage. Hostel Dudes will show all verified PGs nearby with distance, price, and amenity filters.",
   },
   {
     q: "Are the listings verified?",
@@ -124,11 +124,11 @@ export const FAQS = [
     a: "Absolutely. You can call, WhatsApp, or use our in-app chat feature to directly connect with the PG owner.",
   },
   {
-    q: "Is StayNest free for students?",
+    q: "Is Hostel Dudes free for students?",
     a: "Yes, searching and booking inquiries are completely free for students. We charge a small service fee only upon confirmed bookings.",
   },
   {
-    q: "How do I list my PG on StayNest?",
+    q: "How do I list my PG on Hostel Dudes?",
     a: "PG owners can register or contact our admin team. We'll verify your property and create your owner dashboard to manage listings and bookings.",
   },
   {

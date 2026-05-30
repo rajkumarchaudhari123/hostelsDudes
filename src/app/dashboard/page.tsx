@@ -61,7 +61,7 @@ export default function StudentDashboard() {
               <Home className="w-5 h-5 text-white" />
             </div>
             <div>
-              <p className="font-display font-bold text-slate-900 text-sm">StayNest</p>
+              <p className="font-display font-bold text-slate-900 text-sm">Hostel Dudes</p>
               <p className="text-slate-400 text-xs">Student Portal</p>
             </div>
           </Link>

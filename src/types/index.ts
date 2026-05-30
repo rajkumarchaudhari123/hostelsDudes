@@ -1,4 +1,4 @@
-// StayNest - Global TypeScript Types
+// Hostel Dudes - Global TypeScript Types
 
 import { UserRole, Gender, RoomType, BookingStatus, PGStatus } from "@prisma/client";
 

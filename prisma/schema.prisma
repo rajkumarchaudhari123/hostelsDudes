@@ -1,4 +1,4 @@
-// StayNest PG Finder - Complete Prisma Schema
+// Hostel Dudes PG Finder - Complete Prisma Schema
 generator client {
   provider = "prisma-client-js"
 }

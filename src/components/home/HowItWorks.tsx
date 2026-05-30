@@ -35,7 +35,7 @@ const STEPS = [
     icon: CheckCircle,
     step: "04",
     title: "Book & Move In",
-    description: "Directly contact the owner, schedule a visit, and book your PG securely through StayNest.",
+    description: "Directly contact the owner, schedule a visit, and book your PG securely through Hostel Dudes.",
     color: "text-teal-600",
     bg: "bg-teal-50",
     gradient: "from-teal-600 to-teal-500",
@@ -60,7 +60,7 @@ export default function HowItWorks() {
             Find Your PG in 4 Easy Steps
           </h2>
           <p className="text-slate-500 mt-3 max-w-md mx-auto">
-            From search to move-in, StayNest makes the whole process smooth and transparent
+            From search to move-in, Hostel Dudes makes the whole process smooth and transparent
           </p>
         </motion.div>
 

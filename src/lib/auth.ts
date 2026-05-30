@@ -32,13 +32,13 @@ export const { handlers, auth, signIn, signOut } = NextAuth({
         console.log("NextAuth authorize received credentials:", { emailStr, passStr });
 
         // Demo accounts fallback (bypasses database requirements for instant zero-config presentation)
-        if ((emailStr === "admin@staynest.in" || emailStr === "admin@hostelsdudes.in") && (passStr === "Admin@123" || passStr === "Hostel@123")) {
+        if ((emailStr === "admin@hostelsdudes.in") && (passStr === "Admin@123" || passStr === "Hostel@123")) {
           return { id: "demo-admin", name: "Super Admin", email: "admin@hostelsdudes.in", role: "SUPER_ADMIN" };
         }
-        if ((emailStr === "owner@staynest.in" || emailStr === "owner@hostelsdudes.in") && (passStr === "Owner@123" || passStr === "Hostel@123")) {
+        if ((emailStr === "owner@hostelsdudes.in") && (passStr === "Owner@123" || passStr === "Hostel@123")) {
           return { id: "demo-owner", name: "Sunita Khanna", email: "owner@hostelsdudes.in", role: "PG_OWNER" };
         }
-        if ((emailStr === "student@staynest.in" || emailStr === "student@hostelsdudes.in") && (passStr === "Student@123" || passStr === "Hostel@123")) {
+        if ((emailStr === "student@hostelsdudes.in") && (passStr === "Student@123" || passStr === "Hostel@123")) {
           return { id: "demo-student", name: "Anjali Sharma", email: "student@hostelsdudes.in", role: "STUDENT" };
         }
 

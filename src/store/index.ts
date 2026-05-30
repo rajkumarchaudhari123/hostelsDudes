@@ -36,7 +36,7 @@ export const useSearchStore = create<SearchState>()(
       clearRecentSearches: () => set({ recentSearches: [] }),
     }),
     {
-      name: "staynest-search",
+      name: "hostelsdudes-search",
       partialize: (state) => ({
         recentSearches: state.recentSearches,
       }),
@@ -78,7 +78,7 @@ export const useFavoritesStore = create<FavoritesState>()(
       isFavorite: (pgId) => get().favoriteIds.includes(pgId),
     }),
     {
-      name: "staynest-favorites",
+      name: "hostelsdudes-favorites",
     }
   )
 );

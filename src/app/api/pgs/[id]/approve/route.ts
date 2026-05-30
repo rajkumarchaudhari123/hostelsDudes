@@ -35,7 +35,7 @@ export async function POST(
         type: "APPROVAL",
         title: action === "approve" ? "🎉 PG Listing Approved!" : "PG Listing Rejected",
         message: action === "approve"
-          ? `Your PG "${pg.name}" has been verified and is now live on StayNest.`
+          ? `Your PG "${pg.name}" has been verified and is now live on Hostel Dudes.`
           : `Your PG "${pg.name}" was rejected. ${reason ? `Reason: ${reason}` : "Please update the listing and resubmit."}`,
         link: `/pg/${pg.slug}`,
       },

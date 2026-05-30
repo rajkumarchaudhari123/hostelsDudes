@@ -34,7 +34,7 @@ export default function ContactPage() {
             {/* Contact info */}
             <div className="lg:col-span-2 space-y-6">
               {[
-                { icon: Mail, label: "Email Us", value: "hello@staynest.in", href: "mailto:hello@staynest.in", color: "bg-blue-100 text-blue-600" },
+                { icon: Mail, label: "Email Us", value: "hello@hostelsdudes.in", href: "mailto:hello@hostelsdudes.in", color: "bg-blue-100 text-blue-600" },
                 { icon: Phone, label: "Call Us", value: "+91 88000 00000", href: "tel:+918800000000", color: "bg-green-100 text-green-600" },
                 { icon: MapPin, label: "Our Office", value: "Koregaon Park, Pune 411001", href: "#", color: "bg-orange-100 text-orange-600" },
               ].map(({ icon: Icon, label, value, href, color }) => (

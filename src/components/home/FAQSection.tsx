@@ -25,7 +25,7 @@ export default function FAQSection() {
             Frequently Asked Questions
           </h2>
           <p className="text-slate-500 mt-3">
-            Everything you need to know about finding PGs on StayNest
+            Everything you need to know about finding PGs on Hostel Dudes
           </p>
         </motion.div>
 
@@ -83,7 +83,7 @@ export default function FAQSection() {
             Still have questions?
           </p>
           <a
-            href="mailto:hello@staynest.in"
+            href="mailto:hello@hostelsdudes.in"
             className="btn-primary inline-flex items-center gap-2"
           >
             Contact Support

@@ -1,5 +1,5 @@
 /**
- * StayNest – Prisma Seed Script
+ * Hostel Dudes – Prisma Seed Script
  * Run: npx prisma db seed
  */
 
@@ -9,7 +9,7 @@ import bcrypt from "bcryptjs";
 const prisma = new PrismaClient();
 
 async function main() {
-  console.log("🌱 Seeding StayNest database...");
+  console.log("🌱 Seeding Hostel Dudes database...");
 
   // ─── Clean existing data ───────────────────────────────────────────────────
   await prisma.$transaction([
@@ -42,7 +42,7 @@ async function main() {
   const superAdmin = await prisma.user.create({
     data: {
       name: "Super Admin",
-      email: "admin@staynest.in",
+      email: "admin@hostelsdudes.in",
       password: adminPassword,
       role: "SUPER_ADMIN",
       status: "ACTIVE",
@@ -52,7 +52,7 @@ async function main() {
   const owner1 = await prisma.user.create({
     data: {
       name: "Sunita Khanna",
-      email: "owner@staynest.in",
+      email: "owner@hostelsdudes.in",
       phone: "+91 98765 43210",
       password: ownerPassword,
       role: "PG_OWNER",
@@ -63,7 +63,7 @@ async function main() {
   const owner2 = await prisma.user.create({
     data: {
       name: "Rajesh Mehta",
-      email: "rajesh@staynest.in",
+      email: "rajesh@hostelsdudes.in",
       phone: "+91 87654 32109",
       password: ownerPassword,
       role: "PG_OWNER",
@@ -74,7 +74,7 @@ async function main() {
   const student1 = await prisma.user.create({
     data: {
       name: "Anjali Sharma",
-      email: "student@staynest.in",
+      email: "student@hostelsdudes.in",
       phone: "+91 76543 21098",
       password: studentPassword,
       role: "STUDENT",
@@ -473,9 +473,9 @@ async function main() {
   console.log("\n🎉 Database seeded successfully!");
   console.log("\n📋 Login Credentials:");
   console.log("━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━");
-  console.log("Super Admin: admin@staynest.in / Admin@123");
-  console.log("PG Owner:    owner@staynest.in / Owner@123");
-  console.log("Student:     student@staynest.in / Student@123");
+  console.log("Super Admin: admin@hostelsdudes.in / Admin@123");
+  console.log("PG Owner:    owner@hostelsdudes.in / Owner@123");
+  console.log("Student:     student@hostelsdudes.in / Student@123");
   console.log("━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━");
 }
 

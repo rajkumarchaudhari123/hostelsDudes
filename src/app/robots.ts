@@ -9,6 +9,6 @@ export default function robots(): MetadataRoute.Robots {
         disallow: ["/admin", "/owner", "/dashboard", "/api/", "/settings"],
       },
     ],
-    sitemap: "https://staynest.in/sitemap.xml",
+    sitemap: "https://hostelsdudes.in/sitemap.xml",
   };
 }
