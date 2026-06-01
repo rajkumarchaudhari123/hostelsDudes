@@ -72,21 +72,8 @@ export default function LoginPage() {
             Welcome back to<br />your student hub
           </h2>
           <p className="text-white/70 text-lg max-w-sm mx-auto leading-relaxed">
-            12,000+ verified PGs across India. Find, compare, and book your perfect stay near college.
+            Find, compare, and book your perfect stay near college.
           </p>
-
-          <div className="mt-12 grid grid-cols-3 gap-4 max-w-xs mx-auto">
-            {[
-              { value: "12K+", label: "Verified PGs" },
-              { value: "50K+", label: "Students" },
-              { value: "4.8★", label: "Avg Rating" },
-            ].map(({ value, label }) => (
-              <div key={label} className="bg-white/10 rounded-2xl p-4 text-center">
-                <p className="font-display font-bold text-xl text-white">{value}</p>
-                <p className="text-white/60 text-xs mt-1">{label}</p>
-              </div>
-            ))}
-          </div>
         </div>
       </div>
 
