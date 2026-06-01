@@ -287,7 +287,7 @@ export default function TrustSection() {
               <div className="flex flex-col gap-4">
                 {[
                   { name: "Himanshu Sharma", role: "CEO & Co-founder", avatar: "H" },
-                  { name: "Harish", role: "Co-founder", avatar: "Ha" },
+                  { name: "Harshit Singh", role: "Co-founder", avatar: "HS" },
                   { name: "Rajkumar Chaudhari", role: "CTO & Co-founder", avatar: "R" },
                 ].map((person) => (
                   <div key={person.name} className="flex items-center gap-3">

@@ -90,7 +90,7 @@ export default function AboutPage() {
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 max-w-4xl mx-auto">
               {[
                 { name: "Himanshu Sharma", role: "CEO & Co-founder", emoji: "👨‍💻" },
-                { name: "Harish", role: "Co-founder", emoji: "👨‍💻" },
+                { name: "Harshit Singh", role: "Co-founder", emoji: "👨‍💻" },
                 { name: "Rajkumar Chaudhari", role: "CTO & Co-founder", emoji: "👨‍💻" },
               ].map(({ name, role, emoji }) => (
                 <div key={name} className="bg-slate-50 rounded-2xl p-6 text-center">
