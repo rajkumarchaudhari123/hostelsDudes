@@ -229,7 +229,7 @@ export default function StudentDashboard() {
                             </div>
                           </div>
                           <div className="text-right flex-shrink-0">
-                            <p className="text-sm font-bold text-blue-600">{formatPrice(pg.rent, true)}<span className="text-slate-400 font-normal text-xs">/mo</span></p>
+                            <p className="text-sm font-bold text-blue-600">{formatPrice(pg.rent)}<span className="text-slate-400 font-normal text-xs">/mo</span></p>
                             <div className="flex items-center gap-1 justify-end mt-0.5">
                               <Star className="w-3 h-3 text-yellow-500 fill-yellow-500" />
                               <span className="text-xs font-semibold text-slate-600">{pg.rating}</span>
@@ -316,7 +316,7 @@ export default function StudentDashboard() {
                         </div>
                         <div className="flex items-center justify-between pt-3 border-t border-slate-100">
                           <div>
-                            <span className="text-lg font-display font-bold text-blue-600">{formatPrice(pg.rent, true)}</span>
+                            <span className="text-lg font-display font-bold text-blue-600">{formatPrice(pg.rent)}</span>
                             <span className="text-slate-400 text-xs">/mo</span>
                           </div>
                           <Link href={`/pg/sunrise-pg-girls-pune`} className="btn-primary text-xs px-4 py-2">

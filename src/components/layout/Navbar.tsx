@@ -3,6 +3,7 @@
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { signOut } from "next-auth/react";
 import { motion, AnimatePresence } from "framer-motion";
 import {
   Menu,
@@ -185,12 +186,13 @@ export default function Navbar({ user }: NavbarProps) {
                               <Settings className="w-4 h-4" />
                               Settings
                             </Link>
-                            <form action="/api/auth/signout" method="post">
-                              <button className="w-full flex items-center gap-3 px-3 py-2.5 rounded-xl text-sm text-red-600 hover:bg-red-50 transition-colors">
-                                <LogOut className="w-4 h-4" />
-                                Sign Out
-                              </button>
-                            </form>
+                            <button
+                              onClick={() => signOut({ callbackUrl: "/" })}
+                              className="w-full flex items-center gap-3 px-3 py-2.5 rounded-xl text-sm text-red-600 hover:bg-red-50 transition-colors"
+                            >
+                              <LogOut className="w-4 h-4" />
+                              Sign Out
+                            </button>
                           </div>
                         </motion.div>
                       )}

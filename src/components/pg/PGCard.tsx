@@ -237,10 +237,10 @@ export default function PGCard({
             {/* Price & Actions */}
             <div className="flex items-center justify-between pt-3 border-t border-slate-100">
               <div>
-                <span className="text-xl font-display font-bold text-blue-600">{formatPrice(pg.minRent, true)}</span>
+                <span className="text-xl font-display font-bold text-blue-600">{formatPrice(pg.minRent)}</span>
                 <span className="text-slate-400 text-sm">/month</span>
                 {pg.minRent !== pg.maxRent && (
-                  <span className="text-slate-400 text-xs ml-1">– {formatPrice(pg.maxRent, true)}</span>
+                  <span className="text-slate-400 text-xs ml-1">– {formatPrice(pg.maxRent)}</span>
                 )}
               </div>
               <div className="flex items-center gap-2">
