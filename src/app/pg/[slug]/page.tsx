@@ -202,18 +202,6 @@ export default function PGDetailPage() {
                   </div>
                 )}
               </div>
-
-              {/* Visit Charge Alert */}
-              <div className="bg-gradient-to-r from-orange-500 via-amber-500 to-orange-600 text-white rounded-2xl p-4 shadow-md flex items-center gap-3 border border-orange-400/20">
-                <div className="w-10 h-10 bg-white/20 rounded-xl flex items-center justify-center flex-shrink-0">
-                  <span className="text-xl animate-pulse">🏠</span>
-                </div>
-                <div>
-                  <h4 className="font-bold text-sm sm:text-base">₹100 PG Site Visit Charge Only</h4>
-                  <p className="text-white/95 text-xs">Accompanying, guided in-person visit with our expert executive for just ₹100!</p>
-                </div>
-              </div>
-
               {/* Title & Info */}
               <div className="bg-white rounded-2xl p-6 shadow-sm border border-slate-100">
                 <div className="flex items-start justify-between gap-4 mb-4">
@@ -508,10 +496,6 @@ export default function PGDetailPage() {
                     )}
                   </div>
                   <p className="text-xs text-slate-400 text-center">Free to inquire · No booking fees</p>
-                  <div className="mt-4 pt-3 border-t border-slate-100 flex items-center justify-center gap-1.5 text-xs font-bold text-orange-600 bg-orange-50/50 py-1.5 rounded-lg">
-                    <span>🏠</span>
-                    <span>₹100 PG Site Visit Charge Applies</span>
-                  </div>
                 </div>
 
                 {/* Key Details */}

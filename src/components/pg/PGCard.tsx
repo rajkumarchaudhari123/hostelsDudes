@@ -172,9 +172,6 @@ export default function PGCard({
               <span className={cn("badge text-xs", GENDER_COLORS[pg.gender])}>
                 {genderLabel(pg.gender)}
               </span>
-              <span className="flex items-center gap-1 bg-gradient-to-r from-orange-500 to-amber-500 text-white text-[10px] sm:text-xs px-2 py-1 rounded-lg font-bold shadow-sm border border-orange-400/20">
-                🏠 ₹100 Visit Charge
-              </span>
             </div>
 
             {/* Favorite */}
