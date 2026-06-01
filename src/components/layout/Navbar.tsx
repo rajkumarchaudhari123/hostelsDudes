@@ -63,8 +63,8 @@ export default function Navbar({ user }: NavbarProps) {
         transition={{ duration: 0.5, ease: "easeOut" }}
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
           isTransparent
-            ? "bg-transparent"
-            : "bg-white/90 backdrop-blur-xl border-b border-slate-100 shadow-[0_4px_20px_rgba(37,99,235,0.06)]"
+            ? "bg-slate-100/80 backdrop-blur-md"
+            : "bg-slate-100/95 backdrop-blur-xl border-b border-slate-200 shadow-[0_4px_20px_rgba(0,0,0,0.06)]"
         }`}
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
