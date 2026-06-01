@@ -3,7 +3,7 @@
 import { useState, useEffect } from "react";
 import { useRouter } from "next/navigation";
 import { motion } from "framer-motion";
-import { Search, MapPin, GraduationCap, Building2, Sparkles, Shield, Star, Users } from "lucide-react";
+import { Search, MapPin, GraduationCap, Building2, Shield, Star, Users } from "lucide-react";
 import { buildQueryString } from "@/utils";
 
 const ROTATING_CITIES = ["Noida", "Greater Noida"];
@@ -13,13 +13,6 @@ const STATS = [
   { label: "Dedicated Help", value: "Student-First", icon: Users },
   { label: "Areas Covered", value: "Noida & Greater Noida", icon: MapPin },
   { label: "Service Support", value: "24/7 Live", icon: Star },
-];
-
-const FLOAT_CARDS = [
-  { top: "15%", left: "5%", text: "Verified Listing", icon: "✅" },
-  { top: "15%", right: "5%", text: "₹6,500/month", icon: "💰" },
-  { bottom: "25%", left: "3%", text: "4.9 Rating", icon: "⭐" },
-  { bottom: "25%", right: "3%", text: "Zero Brokerage", icon: "🎉" },
 ];
 
 export default function HeroSection() {
@@ -46,83 +39,54 @@ export default function HeroSection() {
   };
 
   return (
-    <section className="relative min-h-screen flex items-center overflow-hidden bg-hero-gradient">
-      {/* Animated mesh background */}
-      <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute -top-40 -right-40 w-96 h-96 bg-blue-500/20 rounded-full blur-3xl animate-pulse-slow" />
-        <div className="absolute top-1/2 -left-20 w-72 h-72 bg-cyan-500/15 rounded-full blur-3xl animate-float" />
-        <div className="absolute -bottom-20 right-1/4 w-80 h-80 bg-indigo-500/20 rounded-full blur-3xl animate-pulse-slow" />
-        {/* Grid overlay */}
+    <section className="relative min-h-screen flex items-center overflow-hidden bg-white">
+      {/* Subtle blue ambient blobs */}
+      <div className="absolute inset-0 overflow-hidden pointer-events-none">
+        <div className="absolute -top-40 -right-40 w-96 h-96 bg-blue-100 rounded-full blur-3xl opacity-60" />
+        <div className="absolute top-1/2 -left-20 w-72 h-72 bg-indigo-100 rounded-full blur-3xl opacity-50" />
+        <div className="absolute -bottom-20 right-1/4 w-80 h-80 bg-blue-50 rounded-full blur-3xl opacity-70" />
+        {/* Dot grid */}
         <div
-          className="absolute inset-0 opacity-[0.03]"
+          className="absolute inset-0 opacity-[0.04]"
           style={{
-            backgroundImage: `linear-gradient(rgba(255,255,255,0.5) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.5) 1px, transparent 1px)`,
-            backgroundSize: "60px 60px",
+            backgroundImage: "radial-gradient(circle, #2563eb 1px, transparent 1px)",
+            backgroundSize: "36px 36px",
           }}
         />
       </div>
 
-      {/* Floating cards (desktop only) */}
-      {FLOAT_CARDS.map((card, i) => (
-        <motion.div
-          key={i}
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.8 + i * 0.15, duration: 0.6 }}
-          style={{
-            position: "absolute",
-            ...Object.fromEntries(Object.entries(card).filter(([k]) => ["top","bottom","left","right"].includes(k))),
-            animationDelay: `${i * 1.2}s`
-          } as React.CSSProperties}
-          className="hidden lg:flex items-center gap-2.5 glass px-4 py-3 rounded-2xl animate-float"
-        >
-          <span className="text-xl">{card.icon}</span>
-          <span className="text-white text-sm font-semibold">{card.text}</span>
-        </motion.div>
-      ))}
-
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-28 pb-20 w-full">
         <div className="max-w-3xl mx-auto text-center">
-          {/* Badge */}
-          <div className="flex items-center justify-center mb-8">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5 }}
-              className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm border border-white/20 px-4 py-2 rounded-full"
-            >
-              <Sparkles className="w-4 h-4 text-yellow-400" />
-              <span className="text-sm text-white/90 font-medium">India&apos;s #1 PG Finder Platform</span>
-            </motion.div>
-          </div>
 
           {/* Headline */}
           <motion.h1
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.1 }}
-            className="font-display text-4xl sm:text-5xl lg:text-6xl font-bold text-white leading-tight mb-5"
+            transition={{ duration: 0.6 }}
+            className="font-display text-4xl sm:text-5xl lg:text-6xl font-bold text-blue-700 leading-tight mb-5"
           >
             Find Your{" "}
             <span className="relative">
-              <span className="bg-gradient-to-r from-yellow-400 to-orange-400 bg-clip-text text-transparent">Perfect PG</span>
+              <span className="bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">
+                Perfect PG
+              </span>
               <svg className="absolute -bottom-2 left-0 w-full" viewBox="0 0 300 12" fill="none">
-                <path d="M2 9 C 75 2, 225 2, 298 9" stroke="#F97316" strokeWidth="3" strokeLinecap="round" fill="none" />
+                <path d="M2 9 C 75 2, 225 2, 298 9" stroke="#2563eb" strokeWidth="3" strokeLinecap="round" fill="none" />
               </svg>
             </span>
             <br />
             Near Your College
           </motion.h1>
 
-          {/* Subheadline with rotating cities */}
+          {/* Subheadline */}
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-            className="text-lg text-white/75 mb-10 leading-relaxed"
+            transition={{ duration: 0.6, delay: 0.15 }}
+            className="text-lg text-slate-500 mb-10 leading-relaxed"
           >
             Verified PGs in{" "}
-            <span className="text-cyan-400 font-semibold inline-block min-w-[80px]">
+            <span className="text-blue-600 font-semibold inline-block min-w-[80px]">
               {ROTATING_CITIES[cityIndex]}
             </span>
           </motion.p>
@@ -131,11 +95,11 @@ export default function HeroSection() {
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.3 }}
-            className="glass rounded-3xl p-2 shadow-[0_20px_80px_rgba(0,0,0,0.3)]"
+            transition={{ duration: 0.6, delay: 0.25 }}
+            className="bg-white rounded-3xl p-2 shadow-[0_8px_50px_rgba(37,99,235,0.12)] border border-blue-100"
           >
             {/* Search Type Tabs */}
-            <div className="flex gap-1 p-1 bg-white/5 rounded-2xl mb-2">
+            <div className="flex gap-1 p-1 bg-slate-50 rounded-2xl mb-2">
               {(["college", "city", "area"] as const).map((type) => (
                 <button
                   key={type}
@@ -143,7 +107,7 @@ export default function HeroSection() {
                   className={`flex-1 py-2 px-3 rounded-xl text-sm font-semibold capitalize transition-all ${
                     searchType === type
                       ? "bg-white text-blue-600 shadow-sm"
-                      : "text-white/70 hover:text-white"
+                      : "text-slate-500 hover:text-blue-600"
                   }`}
                 >
                   {type === "college" ? "By College" : type === "city" ? "By City" : "By Area"}
@@ -154,7 +118,7 @@ export default function HeroSection() {
             {/* Search Form */}
             <form onSubmit={handleSearch} className="flex flex-col sm:flex-row gap-2 p-2">
               {/* Main Input */}
-              <div className="flex-1 flex items-center gap-3 bg-white rounded-2xl px-4 py-3">
+              <div className="flex-1 flex items-center gap-3 bg-slate-50 border border-slate-200 rounded-2xl px-4 py-3">
                 {searchType === "college" ? (
                   <GraduationCap className="w-5 h-5 text-blue-400 flex-shrink-0" />
                 ) : (
@@ -166,7 +130,7 @@ export default function HeroSection() {
                     searchType === "college"
                       ? "Enter college or university name..."
                       : searchType === "city"
-                      ? "Enter city (e.g. Pune, Bangalore)..."
+                      ? "Enter city (e.g. Noida, Greater Noida)..."
                       : "Enter area or locality..."
                   }
                   value={query}
@@ -179,7 +143,7 @@ export default function HeroSection() {
               <select
                 value={gender}
                 onChange={(e) => setGender(e.target.value)}
-                className="bg-white text-slate-700 rounded-2xl px-4 py-3 text-sm font-semibold outline-none cursor-pointer sm:w-36"
+                className="bg-slate-50 border border-slate-200 text-slate-700 rounded-2xl px-4 py-3 text-sm font-semibold outline-none cursor-pointer sm:w-36"
               >
                 <option value="ANY">Co-ed</option>
                 <option value="MALE">Boys PG</option>
@@ -189,7 +153,7 @@ export default function HeroSection() {
               {/* Submit */}
               <button
                 type="submit"
-                className="flex items-center justify-center gap-2 bg-gradient-to-r from-blue-600 to-indigo-600 text-white px-8 py-3 rounded-2xl font-bold text-sm hover:from-blue-700 hover:to-indigo-700 transition-all shadow-lg shadow-blue-500/30 active:scale-95 whitespace-nowrap"
+                className="flex items-center justify-center gap-2 bg-gradient-to-r from-blue-600 to-indigo-600 text-white px-8 py-3 rounded-2xl font-bold text-sm hover:from-blue-700 hover:to-indigo-700 transition-all shadow-lg shadow-blue-500/25 active:scale-95 whitespace-nowrap"
               >
                 <Search className="w-4 h-4" />
                 Search PGs
@@ -198,12 +162,12 @@ export default function HeroSection() {
 
             {/* Popular Searches */}
             <div className="flex flex-wrap items-center gap-2 px-3 pb-2 pt-1">
-              <span className="text-white/50 text-xs">Popular:</span>
+              <span className="text-slate-400 text-xs">Popular:</span>
               {["Amity University", "Sharda University", "Galgotias University", "Bennett University"].map((item) => (
                 <button
                   key={item}
                   onClick={() => { setSearchType("college"); setQuery(item); }}
-                  className="text-xs bg-white/10 text-white/80 hover:bg-white/20 hover:text-white px-3 py-1.5 rounded-full transition-all"
+                  className="text-xs bg-blue-50 text-blue-600 hover:bg-blue-100 px-3 py-1.5 rounded-full transition-all font-medium"
                 >
                   {item}
                 </button>
@@ -215,7 +179,7 @@ export default function HeroSection() {
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            transition={{ delay: 0.7 }}
+            transition={{ delay: 0.5 }}
             className="flex flex-wrap items-center justify-center gap-6 mt-10"
           >
             {[
@@ -223,8 +187,8 @@ export default function HeroSection() {
               { icon: Star, text: "Top Rated Support" },
               { icon: MapPin, text: "Noida & Greater Noida" },
             ].map(({ icon: Icon, text }) => (
-              <div key={text} className="flex items-center gap-2 text-white/60">
-                <Icon className="w-4 h-4 text-cyan-400" />
+              <div key={text} className="flex items-center gap-2 text-slate-500">
+                <Icon className="w-4 h-4 text-blue-500" />
                 <span className="text-sm">{text}</span>
               </div>
             ))}
@@ -235,7 +199,7 @@ export default function HeroSection() {
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.8 }}
+          transition={{ delay: 0.6 }}
           className="grid grid-cols-2 md:grid-cols-4 gap-4 mt-16 max-w-4xl mx-auto"
         >
           {STATS.map(({ label, value, icon: Icon }, i) => (
@@ -243,12 +207,12 @@ export default function HeroSection() {
               key={label}
               initial={{ opacity: 0, scale: 0.9 }}
               animate={{ opacity: 1, scale: 1 }}
-              transition={{ delay: 0.9 + i * 0.1 }}
-              className="glass rounded-2xl p-5 text-center"
+              transition={{ delay: 0.7 + i * 0.1 }}
+              className="bg-white border border-blue-100 rounded-2xl p-5 text-center shadow-sm hover:shadow-md hover:-translate-y-1 transition-all"
             >
-              <Icon className="w-6 h-6 text-cyan-400 mx-auto mb-2" />
-              <div className="font-display font-bold text-2xl text-white">{value}</div>
-              <div className="text-white/60 text-xs mt-1">{label}</div>
+              <Icon className="w-6 h-6 text-blue-500 mx-auto mb-2" />
+              <div className="font-display font-bold text-xl text-blue-700">{value}</div>
+              <div className="text-slate-500 text-xs mt-1">{label}</div>
             </motion.div>
           ))}
         </motion.div>
