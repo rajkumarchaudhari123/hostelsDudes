@@ -26,15 +26,6 @@ const TRUST_PILLARS = [
     statLabel: "Brokerage Fees",
   },
   {
-    icon: BadgeCheck,
-    gradient: "from-green-500 to-teal-500",
-    glow: "rgba(34,197,94,0.25)",
-    title: "Transparent Pricing",
-    desc: "What you see is what you pay. No hidden charges, no last-minute surprises. Rent, deposit, and facilities — all upfront.",
-    stat: "₹100",
-    statLabel: "Site Visit Only",
-  },
-  {
     icon: Lock,
     gradient: "from-orange-500 to-amber-500",
     glow: "rgba(249,115,22,0.25)",
