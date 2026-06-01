@@ -7,7 +7,6 @@ import TrendingCities from "@/components/home/TrendingCities";
 import Testimonials from "@/components/home/Testimonials";
 import FAQSection from "@/components/home/FAQSection";
 import HowItWorks from "@/components/home/HowItWorks";
-import CTASection from "@/components/home/CTASection";
 
 import TrustSection from "@/components/home/TrustSection";
 
@@ -30,7 +29,6 @@ export default function HomePage() {
         <TrendingCities />
         <Testimonials />
         <FAQSection />
-        <CTASection />
       </main>
       <Footer />
     </>
