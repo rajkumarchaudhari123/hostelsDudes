@@ -12,6 +12,7 @@ export default function FloatingContact() {
       <AnimatePresence>
         {/* WhatsApp Pill */}
         <motion.a
+          key="whatsapp-pill"
           initial={{ opacity: 0, y: 20, scale: 0.9 }}
           animate={{ opacity: 1, y: 0, scale: 1 }}
           transition={{ delay: 0.1, duration: 0.3 }}
@@ -26,6 +27,7 @@ export default function FloatingContact() {
 
         {/* Call Now Button */}
         <motion.a
+          key="call-button"
           initial={{ opacity: 0, y: 20, scale: 0.9 }}
           animate={{ opacity: 1, y: 0, scale: 1 }}
           transition={{ duration: 0.3 }}
