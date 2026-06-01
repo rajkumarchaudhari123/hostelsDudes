@@ -237,10 +237,10 @@ export default function PGCard({
             {/* Price & Actions */}
             <div className="flex items-center justify-between pt-3 border-t border-slate-100">
               <div>
-                <span className="text-xl font-display font-bold text-blue-600">{formatPrice(pg.minRent)}</span>
-                <span className="text-slate-400 text-sm">/month</span>
+                <span className="text-xl font-display font-bold text-slate-900">{formatPrice(pg.minRent)}</span>
+                <span className="text-slate-500 text-sm">/month</span>
                 {pg.minRent !== pg.maxRent && (
-                  <span className="text-slate-400 text-xs ml-1">– {formatPrice(pg.maxRent)}</span>
+                  <span className="text-slate-500 text-xs ml-1">– {formatPrice(pg.maxRent)}</span>
                 )}
               </div>
               <div className="flex items-center gap-2">
@@ -266,7 +266,7 @@ export default function PGCard({
                 )}
                 <Link
                   href={`/pg/${pg.slug}`}
-                  className="btn-primary text-xs px-4 py-2"
+                  className="bg-slate-900 hover:bg-black text-white font-bold text-xs px-4 py-2 rounded-xl transition-colors"
                   onClick={(e) => e.stopPropagation()}
                 >
                   View Details

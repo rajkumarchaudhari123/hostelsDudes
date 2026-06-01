@@ -234,28 +234,9 @@ export default function PGDetailPage() {
                 </div>
 
                 {/* Rating bar */}
-                <div className="flex items-center gap-4 p-4 bg-yellow-50 rounded-xl mb-4">
-                  <div className="text-center">
-                    <div className="font-bold text-3xl text-yellow-600">{pg.rating ? pg.rating.toFixed(1) : "New"}</div>
-                    <div className="flex gap-0.5 mt-1">
-                      {[1,2,3,4,5].map((s) => (
-                        <Star key={s} className={`w-3.5 h-3.5 ${s <= Math.round(pg.rating || 0) ? "fill-yellow-400 text-yellow-400" : "text-slate-300"}`} />
-                      ))}
-                    </div>
-                    <p className="text-xs text-yellow-600/70 mt-1">{pg.reviewCount || 0} reviews</p>
-                  </div>
-                  {(pg.reviewCount || 0) > 0 && (
-                    <div className="flex-1 space-y-1">
-                      {ratingBars.map((r) => (
-                        <div key={r} className="flex items-center gap-2">
-                          <span className="text-xs text-slate-500 w-4">{r}</span>
-                          <div className="flex-1 h-1.5 bg-slate-200 rounded-full overflow-hidden">
-                            <div className="h-full bg-yellow-400 rounded-full" style={{ width: `${r === 5 ? 70 : r === 4 ? 20 : r === 3 ? 7 : 3}%` }} />
-                          </div>
-                        </div>
-                      ))}
-                    </div>
-                  )}
+                <div className="inline-flex items-center gap-1.5 px-3 py-1 bg-yellow-50 rounded-lg mb-4 text-yellow-700 font-bold text-xs">
+                  <Star className="w-3.5 h-3.5 fill-yellow-400 text-yellow-400" />
+                  <span>{pg.rating ? pg.rating.toFixed(1) : "New"} Rating</span>
                 </div>
 
                 {/* Quick Stats */}
