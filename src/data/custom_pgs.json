@@ -37,9 +37,10 @@
     "hasHotWater": true,
     "hasTVRoom": true,
     "images": [
-      "https://images.unsplash.com/photo-1555854877-bab0e564b8d5?w=800&q=60",
-      "https://images.unsplash.com/photo-1484154218962-a197022b5858?w=800&q=60"
+      "/mannat_building.jpg",
+      "/mannat_room.png",
+      "/mannat_bathroom.png"
     ],
-    "coverImage": "https://images.unsplash.com/photo-1555854877-bab0e564b8d5?w=800&q=60"
+    "coverImage": "/mannat_building.jpg"
   }
 ]
