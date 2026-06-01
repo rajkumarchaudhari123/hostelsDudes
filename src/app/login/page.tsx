@@ -167,15 +167,7 @@ export default function LoginPage() {
             </Link>
           </p>
 
-          {/* Demo credentials */}
-          <div className="mt-8 p-4 bg-blue-50 rounded-xl border border-blue-100">
-            <p className="text-xs font-semibold text-blue-700 mb-2">🔑 Demo Credentials</p>
-            <div className="space-y-1 text-xs text-blue-600">
-              <p>Super Admin: admin@hostelsdudes.in / Hostel@123</p>
-              <p>PG Owner: owner@hostelsdudes.in / Hostel@123</p>
-              <p>Student: student@hostelsdudes.in / Hostel@123</p>
-            </div>
-          </div>
+
         </motion.div>
       </div>
     </div>
