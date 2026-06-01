@@ -14,7 +14,7 @@ import TrustSection from "@/components/home/TrustSection";
 export const metadata: Metadata = {
   title: "Hostel Dudes – Find Your Perfect PG Near College in Noida",
   description:
-    "Find verified PG accommodations near top colleges in Noida & Greater Noida. In-person site visits for just ₹100. Zero brokerage. Student-first platform.",
+    "Find verified PG accommodations near top colleges in Noida & Greater Noida. Zero brokerage. Student-first platform.",
 };
 
 export default function HomePage() {

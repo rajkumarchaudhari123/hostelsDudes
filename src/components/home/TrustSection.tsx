@@ -249,7 +249,7 @@ export default function TrustSection() {
                 {[
                   "Personalized attention from real humans",
                   "Every complaint actioned within 2 hours",
-                  "Your ₹100 visit fee is our skin in the game too",
+                  "No hidden charges or surprise costs",
                 ].map((item) => (
                   <div key={item} className="flex items-center gap-3 text-slate-200 text-sm">
                     <ShieldCheck className="w-4 h-4 text-green-400 flex-shrink-0" />

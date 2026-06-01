@@ -40,7 +40,7 @@ export default function Navbar({ user }: NavbarProps) {
   const [profileOpen, setProfileOpen] = useState(false);
   const pathname = usePathname();
 
-  const isTransparent = pathname === "/" && !scrolled;
+  const isTransparent = false;
 
   useEffect(() => {
     const handler = () => setScrolled(window.scrollY > 20);
