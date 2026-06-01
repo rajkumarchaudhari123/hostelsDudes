@@ -107,13 +107,7 @@ export default function Footer() {
                 <a href="mailto:hello@hostelsdudes.in" className="text-sm text-slate-400 hover:text-white transition-colors">hello@hostelsdudes.in</a>
               </li>
             </ul>
-            <div className="mt-6">
-              <p className="text-xs text-slate-500 mb-3">Available on</p>
-              <div className="flex gap-2">
-                <div className="bg-slate-800 rounded-lg px-3 py-2 text-xs text-slate-300 font-medium">App Store</div>
-                <div className="bg-slate-800 rounded-lg px-3 py-2 text-xs text-slate-300 font-medium">Google Play</div>
-              </div>
-            </div>
+
           </div>
         </div>
       </div>
