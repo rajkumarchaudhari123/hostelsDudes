@@ -1,5 +1,6 @@
 import type { Metadata, Viewport } from "next";
 import "./globals.css";
+import FloatingContact from "@/components/layout/FloatingContact";
 
 export const viewport: Viewport = {
   width: "device-width",
@@ -65,7 +66,10 @@ export default function RootLayout({
           rel="stylesheet"
         />
       </head>
-      <body>{children}</body>
+      <body>
+        {children}
+        <FloatingContact />
+      </body>
     </html>
   );
 }
