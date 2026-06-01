@@ -197,10 +197,8 @@ export default function HeroSection() {
       {/* Horizontal Stats Strip */}
       <div className="relative bg-white border-t border-slate-100 py-6 md:py-8 mt-8">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+          <div className="grid grid-cols-2 gap-6 text-center max-w-2xl mx-auto">
             {[
-              { value: "50+", label: "Verified Student PGs" },
-              { value: "500+", label: "Happy Students" },
               { value: "2", label: "Active Cities (Noida & GN)" },
               { value: "4.8★", label: "Average Student Rating" },
             ].map((stat, i) => (
