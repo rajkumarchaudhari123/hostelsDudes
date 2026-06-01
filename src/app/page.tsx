@@ -8,7 +8,7 @@ import Testimonials from "@/components/home/Testimonials";
 import FAQSection from "@/components/home/FAQSection";
 import HowItWorks from "@/components/home/HowItWorks";
 import CTASection from "@/components/home/CTASection";
-import VisitChargeSection from "@/components/home/VisitChargeSection";
+
 import TrustSection from "@/components/home/TrustSection";
 
 export const metadata: Metadata = {
@@ -25,7 +25,7 @@ export default function HomePage() {
         <HeroSection />
         <HowItWorks />
         <FeaturedPGs />
-        <VisitChargeSection />
+
         <TrustSection />
         <TrendingCities />
         <Testimonials />
