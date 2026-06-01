@@ -69,6 +69,39 @@ export default function OwnerDashboard() {
     hasTVRoom: false,
   });
 
+  const handleCoverImageUpload = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const file = e.target.files?.[0];
+    if (file) {
+      const reader = new FileReader();
+      reader.onloadend = () => {
+        setForm(prev => ({ ...prev, coverImage: reader.result as string }));
+      };
+      reader.readAsDataURL(file);
+    }
+  };
+
+  const handleMultipleImagesUpload = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const files = e.target.files;
+    if (files) {
+      const newImages: string[] = [];
+      let loaded = 0;
+      for (let i = 0; i < files.length; i++) {
+        const reader = new FileReader();
+        reader.onloadend = () => {
+          newImages.push(reader.result as string);
+          loaded++;
+          if (loaded === files.length) {
+            setForm(prev => {
+              const current = prev.images ? prev.images.split(",").map(img => img.trim()).filter(Boolean) : [];
+              return { ...prev, images: [...current, ...newImages].join(", ") };
+            });
+          }
+        };
+        reader.readAsDataURL(files[i]);
+      }
+    }
+  };
+
   // Fetch session & owner listings
   const fetchSessionAndListings = async () => {
     try {
@@ -722,12 +755,29 @@ export default function OwnerDashboard() {
                   <h4 className="text-sm font-bold text-blue-700 flex items-center gap-2 border-b pb-1.5"><MapPin className="w-4 h-4" /> Media & Policies</h4>
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                     <div>
-                      <label className="text-xs font-semibold text-slate-700 block mb-1">Cover Image URL</label>
-                      <input 
-                        type="url" placeholder="https://images.unsplash.com/..." 
-                        value={form.coverImage} onChange={(e) => setForm({ ...form, coverImage: e.target.value })} 
-                        className="input-premium py-2 text-sm" 
-                      />
+                      <label className="text-xs font-semibold text-slate-700 block mb-1">Cover Image (Upload Photo or enter URL)</label>
+                      <div className="flex flex-col gap-2">
+                        <input 
+                          type="url" placeholder="https://images.unsplash.com/..." 
+                          value={form.coverImage} onChange={(e) => setForm({ ...form, coverImage: e.target.value })} 
+                          className="input-premium py-2 text-sm" 
+                        />
+                        <div className="flex items-center gap-3">
+                          <label className="cursor-pointer bg-blue-50 hover:bg-blue-100 text-blue-600 text-xs font-bold px-4 py-2 rounded-xl border border-blue-200 transition-colors text-center flex-grow sm:flex-initial">
+                            📤 Choose Cover Photo File
+                            <input 
+                              type="file" accept="image/*" 
+                              onChange={handleCoverImageUpload} 
+                              className="hidden" 
+                            />
+                          </label>
+                          {form.coverImage && (
+                            <span className="text-[10px] text-green-600 font-bold bg-green-50 px-2 py-1 rounded-lg truncate max-w-[200px]">
+                              ✓ Loaded
+                            </span>
+                          )}
+                        </div>
+                      </div>
                     </div>
                     <div>
                       <label className="text-xs font-semibold text-slate-700 block mb-1">Curfew Time (e.g. 10:30 PM)</label>
@@ -758,12 +808,29 @@ export default function OwnerDashboard() {
                     </div>
                   </div>
                   <div>
-                    <label className="text-xs font-semibold text-slate-700 block mb-1">More Image URLs (Comma-separated)</label>
-                    <input 
-                      type="text" placeholder="https://images.unsplash.com/photo-1, https://images.unsplash.com/photo-2" 
-                      value={form.images} onChange={(e) => setForm({ ...form, images: e.target.value })} 
-                      className="input-premium py-2 text-sm" 
-                    />
+                    <label className="text-xs font-semibold text-slate-700 block mb-1">More Images (Upload Photos or enter URLs)</label>
+                    <div className="flex flex-col gap-2">
+                      <input 
+                        type="text" placeholder="https://images.unsplash.com/photo-1, https://images.unsplash.com/photo-2" 
+                        value={form.images} onChange={(e) => setForm({ ...form, images: e.target.value })} 
+                        className="input-premium py-2 text-sm" 
+                      />
+                      <div className="flex items-center gap-3">
+                        <label className="cursor-pointer bg-blue-50 hover:bg-blue-100 text-blue-600 text-xs font-bold px-4 py-2 rounded-xl border border-blue-200 transition-colors text-center flex-grow sm:flex-initial">
+                          📤 Add More Photo Files
+                          <input 
+                            type="file" accept="image/*" multiple
+                            onChange={handleMultipleImagesUpload} 
+                            className="hidden" 
+                          />
+                        </label>
+                        {form.images && (
+                          <span className="text-[10px] text-green-600 font-bold bg-green-50 px-2 py-1 rounded-lg">
+                            ✓ {form.images.split(",").length} loaded
+                          </span>
+                        )}
+                      </div>
+                    </div>
                   </div>
                 </div>
 
