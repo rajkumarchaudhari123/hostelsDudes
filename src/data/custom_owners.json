@@ -9,5 +9,16 @@
     "pgCount": 0,
     "status": "ACTIVE",
     "joinedAt": "2026-05-26T15:52:16.921Z"
+  },
+  {
+    "id": "owner-mannat",
+    "adminId": "SN-MANNAT-OWNER",
+    "name": "Mannat Owner",
+    "email": "mannat@hostelsdudes.in",
+    "phone": "+91 95404 79090",
+    "password": "Hostel@123",
+    "pgCount": 1,
+    "status": "ACTIVE",
+    "joinedAt": "2026-06-01T15:46:56.851Z"
   }
 ]

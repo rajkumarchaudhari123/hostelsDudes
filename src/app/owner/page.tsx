@@ -102,6 +102,20 @@ export default function OwnerDashboard() {
     }
   };
 
+  const handleToggleStatus = async (id: string, currentStatus: string) => {
+    const newStatus = currentStatus === "ACTIVE" ? "INACTIVE" : "ACTIVE";
+    try {
+      setListings(prev => prev.map(pg => pg.id === id ? { ...pg, status: newStatus } : pg));
+      await fetch(`/api/pgs/${id}`, {
+        method: "PATCH",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ status: newStatus }),
+      });
+    } catch (e) {
+      console.error("Failed to toggle status", e);
+    }
+  };
+
   // Fetch session & owner listings
   const fetchSessionAndListings = async () => {
     try {
@@ -477,7 +491,20 @@ export default function OwnerDashboard() {
                             {pg.hasFood && <span className="text-[10px] bg-green-50 text-green-600 border border-green-100 px-2 py-0.5 rounded-full">Food</span>}
                           </div>
 
-                          <div className="flex gap-2 mt-4">
+                          {/* Availability Toggle */}
+                          <div className="flex items-center justify-between bg-slate-50 border border-slate-100 rounded-2xl px-4 py-2 mt-4">
+                            <span className="text-xs font-semibold text-slate-700">Available for Booking</span>
+                            <button
+                              onClick={() => handleToggleStatus(pg.id, pg.status)}
+                              className={`w-10 h-6 flex items-center rounded-full p-1 cursor-pointer transition-colors duration-300 ${pg.status === "ACTIVE" ? "bg-green-500" : "bg-slate-300"}`}
+                            >
+                              <div
+                                className={`bg-white w-4 h-4 rounded-full shadow-md transform transition-transform duration-300 ${pg.status === "ACTIVE" ? "translate-x-4" : ""}`}
+                              />
+                            </button>
+                          </div>
+
+                          <div className="flex gap-2 mt-3">
                             <button className="flex-1 flex items-center justify-center gap-1.5 bg-blue-50 text-blue-600 border border-blue-100 py-2 rounded-xl text-xs font-semibold hover:bg-blue-600 hover:text-white hover:border-blue-600 transition-all">
                               <Edit className="w-3.5 h-3.5" /> Edit
                             </button>

@@ -1,1 +1,45 @@
-[]
+[
+  {
+    "id": "pg-mannat",
+    "ownerId": "SN-MANNAT-OWNER",
+    "cityId": "greater-noida",
+    "name": "Mannat Hostel (Best Boys Hostel)",
+    "slug": "mannat-hostel-boys-greater-noida",
+    "description": "Comfortable rooms made for students in Greater Noida. Features premium facilities like 4-times food (lunch delivered directly to your college), high-speed Wi-Fi, 24x7 security & CCTV, laundry service, private gym, indoor games, common TV room, sanitization, 24 Hr warden, medical kit, power backup, and 24x7 cold water.",
+    "address": "Plot No.75, Namoli Village, Knowledge Park III, Greater Noida, Gujarpur, Uttar Pradesh 201310",
+    "area": "Knowledge Park III",
+    "latitude": 28.4632,
+    "longitude": 77.4912,
+    "gender": "MALE",
+    "status": "ACTIVE",
+    "featured": true,
+    "verified": true,
+    "minRent": 8000,
+    "maxRent": 12000,
+    "deposit": 8000,
+    "noticePeriod": 30,
+    "curfewTime": "None (24Hr Warden)",
+    "totalRooms": 40,
+    "availableRooms": 15,
+    "phone": "+91 95404 79090",
+    "whatsapp": "919540479090",
+    "rating": 4.9,
+    "reviewCount": 1,
+    "hasWifi": true,
+    "hasAC": true,
+    "hasFood": true,
+    "hasLaundry": true,
+    "hasSecurity": true,
+    "hasPowerBackup": true,
+    "hasCCTV": true,
+    "hasGym": true,
+    "hasAttachedBath": true,
+    "hasHotWater": true,
+    "hasTVRoom": true,
+    "images": [
+      "https://images.unsplash.com/photo-1555854877-bab0e564b8d5?w=800&q=60",
+      "https://images.unsplash.com/photo-1484154218962-a197022b5858?w=800&q=60"
+    ],
+    "coverImage": "https://images.unsplash.com/photo-1555854877-bab0e564b8d5?w=800&q=60"
+  }
+]

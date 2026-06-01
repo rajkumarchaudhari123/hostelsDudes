@@ -80,12 +80,31 @@ export async function PATCH(
     const { id } = await params;
     const body = await request.json();
 
-    const pg = await prisma.pG.update({
-      where: { id },
-      data: body,
-    });
+    // 1. Try JSON storage update
+    try {
+      const { getCustomPGs, saveCustomPGs } = await import("@/utils/storage");
+      const customPgs = getCustomPGs();
+      const idx = customPgs.findIndex((p: any) => p.id === id || p.slug === id);
+      if (idx !== -1) {
+        customPgs[idx] = { ...customPgs[idx], ...body };
+        saveCustomPGs(customPgs);
+      }
+    } catch (e) {
+      console.warn("Skipping JSON update inside PATCH", e);
+    }
 
-    return NextResponse.json<ApiResponse>({ success: true, data: pg });
+    // 2. Try DB update
+    let pg = null;
+    try {
+      pg = await prisma.pG.update({
+        where: { id },
+        data: body,
+      });
+    } catch (dbErr) {
+      console.warn("DB offline during PATCH, using local fallback");
+    }
+
+    return NextResponse.json<ApiResponse>({ success: true, data: pg || body });
   } catch (error) {
     console.error("[PG_UPDATE]", error);
     return NextResponse.json<ApiResponse>(
