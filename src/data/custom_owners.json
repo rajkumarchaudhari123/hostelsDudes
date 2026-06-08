@@ -20,5 +20,82 @@
     "pgCount": 1,
     "status": "ACTIVE",
     "joinedAt": "2026-06-01T15:46:56.851Z"
+  },
+  {
+    "id": "owner-valiant",
+    "adminId": "SN-VALIANT-OWNER",
+    "name": "Ajay Yadav & Mahipal Singh",
+    "email": "valiant@hostelsdudes.in",
+    "phone": "+91 92664 52433",
+    "password": "Hostel@123",
+    "pgCount": 1,
+    "status": "ACTIVE",
+    "joinedAt": "2026-06-08T13:23:07.000Z"
+  },
+  {
+    "id": "owner-dignity",
+    "adminId": "SN-DIGNITY-OWNER",
+    "name": "Dignity Owner",
+    "email": "dignity@hostelsdudes.in",
+    "phone": "8796935447",
+    "password": "admin",
+    "pgCount": 1,
+    "status": "ACTIVE",
+    "joinedAt": "2026-06-08T13:57:30.000Z"
+  },
+  {
+    "id": "owner-galaxy",
+    "adminId": "SN-GALAXY-OWNER",
+    "name": "Galaxy Owner",
+    "email": "galaxy@hostelsdudes.in",
+    "phone": "9717100668",
+    "password": "admin",
+    "pgCount": 1,
+    "status": "ACTIVE",
+    "joinedAt": "2026-06-08T13:57:30.000Z"
+  },
+  {
+    "id": "owner-culture",
+    "adminId": "SN-CULTURE-OWNER",
+    "name": "Culture Owner",
+    "email": "culture@hostelsdudes.in",
+    "phone": "9560522902",
+    "password": "admin",
+    "pgCount": 1,
+    "status": "ACTIVE",
+    "joinedAt": "2026-06-08T13:58:55.000Z"
+  },
+  {
+    "id": "owner-sunhaven",
+    "adminId": "SN-SUNHAVEN-OWNER",
+    "name": "Sun Haven Owner",
+    "email": "sunhaven@hostelsdudes.in",
+    "phone": "9599498857",
+    "password": "admin",
+    "pgCount": 1,
+    "status": "ACTIVE",
+    "joinedAt": "2026-06-08T13:58:55.000Z"
+  },
+  {
+    "id": "owner-moon",
+    "adminId": "SN-MOON-OWNER",
+    "name": "Moon Hostel Owner",
+    "email": "moon@hostelsdudes.in",
+    "phone": "9026771665",
+    "password": "admin",
+    "pgCount": 1,
+    "status": "ACTIVE",
+    "joinedAt": "2026-06-08T14:06:06.000Z"
+  },
+  {
+    "id": "owner-spandan",
+    "adminId": "SN-SPANDAN-OWNER",
+    "name": "Spandan Livings Owner",
+    "email": "spandan@hostelsdudes.in",
+    "phone": "9818275109",
+    "password": "admin",
+    "pgCount": 1,
+    "status": "ACTIVE",
+    "joinedAt": "2026-06-08T14:06:06.000Z"
   }
 ]

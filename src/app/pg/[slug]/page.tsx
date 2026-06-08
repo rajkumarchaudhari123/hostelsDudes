@@ -463,14 +463,14 @@ export default function PGDetailPage() {
                       Send Inquiry
                     </button>
                     {pg.whatsapp && (
-                      <a href={`https://wa.me/${String(pg.whatsapp).replace(/\D/g, "")}?text=Hi, I found your PG on Hostel Dudes. I'm interested in ${pg.name}. Please share more details.`}
+                      <a href={`https://wa.me/918826687134?text=Hi, I found your PG on Hostel Dudes. I'm interested in ${pg.name}. Please share more details.`}
                         target="_blank" rel="noopener noreferrer"
                         className="w-full flex items-center justify-center gap-2 bg-green-50 text-green-700 border border-green-200 py-3.5 rounded-xl text-sm font-semibold hover:bg-green-600 hover:text-white hover:border-green-600 transition-all">
                         <MessageCircle className="w-4 h-4" /> WhatsApp Owner
                       </a>
                     )}
                     {pg.phone && (
-                      <a href={`tel:${pg.phone}`}
+                      <a href={`tel:+918826687134`}
                         className="w-full flex items-center justify-center gap-2 bg-slate-50 text-slate-700 border border-slate-200 py-3.5 rounded-xl text-sm font-semibold hover:bg-slate-100 transition-all">
                         <Phone className="w-4 h-4" /> Call Owner
                       </a>

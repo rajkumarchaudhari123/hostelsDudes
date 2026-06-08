@@ -246,7 +246,7 @@ export default function PGCard({
               <div className="flex items-center gap-2">
                 {pg.phone && (
                   <a
-                    href={`tel:${pg.phone}`}
+                    href={`tel:+918826687134`}
                     onClick={(e) => e.stopPropagation()}
                     className="w-8 h-8 bg-green-50 text-green-600 rounded-lg flex items-center justify-center hover:bg-green-600 hover:text-white transition-colors"
                   >
@@ -255,7 +255,7 @@ export default function PGCard({
                 )}
                 {pg.whatsapp && (
                   <a
-                    href={`https://wa.me/${pg.whatsapp}`}
+                    href={`https://wa.me/918826687134?text=Hi, I found your PG on Hostel Dudes. I'm interested in ${pg.name}. Please share more details.`}
                     target="_blank"
                     rel="noopener noreferrer"
                     onClick={(e) => e.stopPropagation()}

@@ -32,7 +32,7 @@ export const { handlers, auth, signIn, signOut } = NextAuth({
         console.log("NextAuth authorize received credentials:", { emailStr, passStr });
 
         // Demo accounts fallback (bypasses database requirements for instant zero-config presentation)
-        if ((emailStr === "admin@hostelsdudes.in") && (passStr === "Admin@123" || passStr === "Hostel@123")) {
+        if ((emailStr === "admin@hostelsdudes.in" || emailStr === "admin") && (passStr === "Admin@123" || passStr === "Hostel@123" || passStr === "admin" || passStr === "password")) {
           return { id: "demo-admin", name: "Super Admin", email: "admin@hostelsdudes.in", role: "SUPER_ADMIN" };
         }
         if ((emailStr === "owner@hostelsdudes.in") && (passStr === "Owner@123" || passStr === "Hostel@123")) {
