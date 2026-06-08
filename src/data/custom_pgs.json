@@ -81,11 +81,11 @@
     "hasHotWater": true,
     "hasTVRoom": true,
     "images": [
-      "/valiant_building.png",
+      "https://images.unsplash.com/photo-1555854877-bab0e564b8d5?w=800&q=80",
       "/valiant_room.png",
       "/valiant_bathroom.png"
     ],
-    "coverImage": "/valiant_building.png"
+    "coverImage": "https://images.unsplash.com/photo-1555854877-bab0e564b8d5?w=800&q=80"
   },
   {
     "id": "pg-dignity",
@@ -126,8 +126,8 @@
     "hasTVRoom": true,
     "images": [
       "/dignity_building.png",
-      "/valiant_room.png",
-      "/valiant_bathroom.png"
+      "/dignity_room1.png",
+      "/dignity_room2.png"
     ],
     "coverImage": "/dignity_building.png"
   },
@@ -170,8 +170,8 @@
     "hasTVRoom": true,
     "images": [
       "/galaxy_building.png",
-      "/valiant_room.png",
-      "/valiant_bathroom.png"
+      "/galaxy_room1.png",
+      "/galaxy_dining.png"
     ],
     "coverImage": "/galaxy_building.png"
   },
@@ -302,8 +302,9 @@
     "hasTVRoom": true,
     "images": [
       "https://images.unsplash.com/photo-1555854877-bab0e564b8d5?w=800&q=80",
-      "https://images.unsplash.com/photo-1596276122653-651a3898309f?w=800&q=80",
-      "https://images.unsplash.com/photo-1505691938895-1758d7feb511?w=800&q=80"
+      "/moon_room1.png",
+      "/moon_room2.png",
+      "/moon_bathroom.png"
     ],
     "coverImage": "https://images.unsplash.com/photo-1555854877-bab0e564b8d5?w=800&q=80"
   },
