@@ -47,14 +47,14 @@
     "id": "pg-valiant",
     "ownerId": "SN-VALIANT-OWNER",
     "cityId": "greater-noida",
-    "name": "Valiant Residency (Girls & Boys Hostel)",
-    "slug": "valiant-residency-girls-boys-greater-noida",
-    "description": "Premium girls and boys hostel located behind Sharda University. Offering fully furnished AC and non-AC rooms with attached toilet, chair, table, separate almirah. Facilities include sports ground for cricket and basketball, fully equipped gym, 4-times high-quality food (breakfast, lunch, evening snacks, dinner) with lunch delivery directly to colleges. Wi-Fi, CCTV, security guards, housekeeping and servant services, power backup, RO cold/hot water, laundry/washing machines, first aid, and transport pick & drop facility at colleges.",
+    "name": "Valiant Residency (Girls Hostel)",
+    "slug": "valiant-residency-girls-greater-noida",
+    "description": "Premium girls hostel located behind Sharda University. Offering fully furnished AC and non-AC rooms with attached toilet, chair, table, separate almirah. Facilities include sports ground for cricket and basketball, fully equipped gym, 4-times high-quality food (breakfast, lunch, evening snacks, dinner) with lunch delivery directly to colleges. Wi-Fi, CCTV, security guards, housekeeping and servant services, power backup, RO cold/hot water, laundry/washing machines, first aid, and transport pick & drop facility at colleges.",
     "address": "Plot No. 30/25, (Rojgar with Ankit Complex), Knowledge Park-3, Behind Sharda University, Greater Noida, G.B. Nagar (U.P.) - 201310",
     "area": "Knowledge Park-3",
     "latitude": 28.4654,
     "longitude": 77.4931,
-    "gender": "ANY",
+    "gender": "FEMALE",
     "status": "ACTIVE",
     "featured": true,
     "verified": true,
@@ -81,11 +81,11 @@
     "hasHotWater": true,
     "hasTVRoom": true,
     "images": [
-      "https://images.unsplash.com/photo-1555854877-bab0e564b8d5?w=800&q=80",
+      "/valiant_building.png",
       "/valiant_room.png",
       "/valiant_bathroom.png"
     ],
-    "coverImage": "https://images.unsplash.com/photo-1555854877-bab0e564b8d5?w=800&q=80"
+    "coverImage": "/valiant_building.png"
   },
   {
     "id": "pg-dignity",
@@ -301,12 +301,12 @@
     "hasHotWater": true,
     "hasTVRoom": true,
     "images": [
-      "https://images.unsplash.com/photo-1555854877-bab0e564b8d5?w=800&q=80",
+      "/moon_cover.jpg",
       "/moon_room1.png",
       "/moon_room2.png",
       "/moon_bathroom.png"
     ],
-    "coverImage": "https://images.unsplash.com/photo-1555854877-bab0e564b8d5?w=800&q=80"
+    "coverImage": "/moon_cover.jpg"
   },
   {
     "id": "pg-spandan",
@@ -447,9 +447,9 @@
     "id": "pg-kp-residency",
     "ownerId": "SN-KPRESDENCY-OWNER",
     "cityId": "greater-noida",
-    "name": "Knowledge Park Residency (Boys & Girls Hostel)",
-    "slug": "knowledge-park-residency-greater-noida",
-    "description": "Knowledge Park Residency is a premium student residence located in Knowledge Park-II, Greater Noida. We offer spacious AC rooms with comfortable triple sharing layouts, full power backup, room cleaning service, parking, TV, laundry, fridge, water cooler (RO), 24/7 warden, microwave, and high-speed Wi-Fi. A secure and corporate-friendly student accommodation with CCTV monitoring.",
+    "name": "Saraswati Nibas (Boys & Girls Hostel)",
+    "slug": "saraswati-nibas-boys-girls-greater-noida",
+    "description": "Saraswati Nibas is a premium student residence located in Knowledge Park-II, Greater Noida. We offer spacious AC rooms with comfortable triple sharing layouts, full power backup, room cleaning service, parking, TV, laundry, fridge, water cooler (RO), 24/7 warden, microwave, and high-speed Wi-Fi. A secure and corporate-friendly student accommodation with CCTV monitoring.",
     "address": "Knowledge Park-II, Greater Noida",
     "area": "Knowledge Park-II",
     "latitude": 28.4610,
