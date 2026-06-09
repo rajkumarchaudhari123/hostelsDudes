@@ -346,11 +346,11 @@
     "hasHotWater": true,
     "hasTVRoom": true,
     "images": [
-      "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=800&q=80",
-      "https://images.unsplash.com/photo-1596276122653-651a3898309f?w=800&q=80",
-      "https://images.unsplash.com/photo-1505691938895-1758d7feb511?w=800&q=80"
+      "/spandan_room1.png",
+      "/spandan_lobby.jpg",
+      "/spandan_room2.png"
     ],
-    "coverImage": "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=800&q=80"
+    "coverImage": "/spandan_room1.png"
   },
   {
     "id": "pg-royal",
