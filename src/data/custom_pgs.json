@@ -367,15 +367,15 @@
     "status": "ACTIVE",
     "featured": true,
     "verified": true,
-    "minRent": 8000,
-    "maxRent": 13000,
-    "deposit": 8000,
+    "minRent": 11000,
+    "maxRent": 15000,
+    "deposit": 11000,
     "noticePeriod": 30,
     "curfewTime": "10:30 PM",
     "totalRooms": 75,
     "availableRooms": 30,
-    "phone": "+91 97181 21214",
-    "whatsapp": "919718121214",
+    "phone": "+91 88266 87134",
+    "whatsapp": "918826687134",
     "rating": 4.8,
     "reviewCount": 1,
     "hasWifi": true,
@@ -391,8 +391,9 @@
     "hasTVRoom": true,
     "images": [
       "/royal_room1.png",
-      "/royal_dining.png",
-      "/royal_gym.png"
+      "/royal_dining.jpg",
+      "/royal_gym.jpg",
+      "/royal_flyer.png"
     ],
     "coverImage": "/royal_room1.png"
   }
