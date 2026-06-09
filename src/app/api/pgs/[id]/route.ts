@@ -120,7 +120,36 @@ export async function DELETE(
 ) {
   try {
     const { id } = await params;
-    await prisma.pG.delete({ where: { id } });
+
+    // 1. Delete from JSON store
+    try {
+      const { getCustomPGs, saveCustomPGs } = await import("@/utils/storage");
+      const customPgs = getCustomPGs();
+      const filtered = customPgs.filter((p: any) => p.id !== id && p.slug !== id);
+      if (filtered.length !== customPgs.length) {
+        saveCustomPGs(filtered);
+      }
+    } catch (e) {
+      console.warn("Skipping JSON delete inside DELETE", e);
+    }
+
+    // 2. Delete from DB
+    try {
+      // Delete any related records first if there are any constraints
+      await prisma.review.deleteMany({ where: { pgId: id } });
+      await prisma.room.deleteMany({ where: { pgId: id } });
+      await prisma.booking.deleteMany({ where: { pgId: id } });
+      await prisma.favorite.deleteMany({ where: { pgId: id } });
+      await prisma.inquiry.deleteMany({ where: { pgId: id } });
+      await prisma.visitschedule.deleteMany({ where: { pgId: id } });
+      await prisma.pGCollege.deleteMany({ where: { pgId: id } });
+      await prisma.foodMenu.deleteMany({ where: { pgId: id } });
+
+      await prisma.pG.delete({ where: { id } });
+    } catch (dbErr) {
+      console.warn("DB PG delete failed or skipped:", dbErr);
+    }
+
     return NextResponse.json<ApiResponse>({ success: true, message: "PG deleted" });
   } catch (error) {
     console.error("[PG_DELETE]", error);
