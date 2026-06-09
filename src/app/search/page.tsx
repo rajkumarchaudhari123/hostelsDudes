@@ -28,11 +28,12 @@ export default function SearchPage() {
     gender: (searchParams.get("gender") as SearchFilters["gender"]) || undefined,
     sortBy: "rating",
     page: 1,
-    limit: 12,
+    limit: 24,
   });
 
   const [results, setResults] = useState<PGSummary[]>(DEMO_RESULTS);
   const [loading, setLoading] = useState(false);
+  const [totalPages, setTotalPages] = useState(1);
   const [viewMode, setViewMode] = useState<"grid" | "map">("grid");
   const [mobileFiltersOpen, setMobileFiltersOpen] = useState(false);
   const [sortOpen, setSortOpen] = useState(false);
@@ -40,11 +41,15 @@ export default function SearchPage() {
   const searchQuery = filters.college || filters.city || filters.area || "";
 
   const handleFilterChange = useCallback((newFilters: Partial<SearchFilters>) => {
-    setFilters((prev) => ({ ...prev, ...newFilters, page: 1 }));
+    setFilters((prev) => ({
+      ...prev,
+      ...newFilters,
+      page: newFilters.page !== undefined ? newFilters.page : 1
+    }));
   }, []);
 
   const handleReset = useCallback(() => {
-    setFilters({ sortBy: "rating", page: 1, limit: 12 });
+    setFilters({ sortBy: "rating", page: 1, limit: 24 });
   }, []);
 
   const handleSortChange = (sortBy: SearchFilters["sortBy"]) => {
@@ -107,6 +112,7 @@ export default function SearchPage() {
       const res = await fetch(`/api/pgs?${qs}`);
       const data = await res.json();
       if (data.success && data.data) {
+        setTotalPages(data.pagination?.totalPages || 1);
         const apiResults: PGSummary[] = data.data.map(normalizeApiPG);
 
         if (apiResults.length > 0) {
@@ -361,20 +367,36 @@ export default function SearchPage() {
               )}
 
               {/* Pagination */}
-              {results.length > 0 && !loading && (
+              {results.length > 0 && !loading && totalPages > 1 && (
                 <div className="flex items-center justify-center gap-2 mt-10">
-                  <button className="px-4 py-2 rounded-xl border border-slate-200 text-sm text-slate-600 hover:border-blue-300 hover:text-blue-600 transition-colors disabled:opacity-40" disabled>
+                  <button
+                    onClick={() => handleFilterChange({ page: (filters.page || 1) - 1 })}
+                    disabled={(filters.page || 1) <= 1}
+                    className="px-4 py-2 rounded-xl border border-slate-200 text-sm text-slate-600 hover:border-blue-300 hover:text-blue-600 transition-colors disabled:opacity-40"
+                  >
                     Previous
                   </button>
-                  {[1, 2, 3].map((p) => (
-                    <button
-                      key={p}
-                      className={`w-9 h-9 rounded-xl text-sm font-semibold transition-colors ${p === 1 ? "bg-blue-600 text-white" : "border border-slate-200 text-slate-600 hover:border-blue-300"}`}
-                    >
-                      {p}
-                    </button>
-                  ))}
-                  <button className="px-4 py-2 rounded-xl border border-slate-200 text-sm text-slate-600 hover:border-blue-300 hover:text-blue-600 transition-colors">
+                  {Array.from({ length: totalPages }).map((_, idx) => {
+                    const p = idx + 1;
+                    return (
+                      <button
+                        key={p}
+                        onClick={() => handleFilterChange({ page: p })}
+                        className={`w-9 h-9 rounded-xl text-sm font-semibold transition-colors ${
+                          (filters.page || 1) === p
+                            ? "bg-blue-600 text-white"
+                            : "border border-slate-200 text-slate-600 hover:border-blue-300"
+                        }`}
+                      >
+                        {p}
+                      </button>
+                    );
+                  })}
+                  <button
+                    onClick={() => handleFilterChange({ page: (filters.page || 1) + 1 })}
+                    disabled={(filters.page || 1) >= totalPages}
+                    className="px-4 py-2 rounded-xl border border-slate-200 text-sm text-slate-600 hover:border-blue-300 hover:text-blue-600 transition-colors disabled:opacity-40"
+                  >
                     Next
                   </button>
                 </div>
