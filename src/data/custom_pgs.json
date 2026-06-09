@@ -81,11 +81,12 @@
     "hasHotWater": true,
     "hasTVRoom": true,
     "images": [
+      "/valiant_cover.jpg",
       "/valiant_building.png",
       "/valiant_room.png",
       "/valiant_bathroom.png"
     ],
-    "coverImage": "/valiant_building.png"
+    "coverImage": "/valiant_cover.jpg"
   },
   {
     "id": "pg-dignity",
