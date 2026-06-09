@@ -40,6 +40,10 @@ export async function GET(
       }
 
       if (pg) {
+        // Block xyz PGs from being accessed
+        if (pg.name?.toLowerCase().includes("xyz")) {
+          return NextResponse.json<ApiResponse>({ success: false, error: "PG not found" }, { status: 404 });
+        }
         prisma.pG.update({ where: { id: pg.id }, data: { viewCount: { increment: 1 } } }).catch(() => {});
         return NextResponse.json<ApiResponse>({ success: true, data: pg });
       }

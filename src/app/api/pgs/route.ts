@@ -28,7 +28,11 @@ export async function GET(request: NextRequest) {
     const hasPowerBackup = searchParams.get("hasPowerBackup");
     const hasAttachedBath = searchParams.get("hasAttachedBath");
 
-    const where: Record<string, any> = { status: "ACTIVE" };
+    const where: Record<string, any> = {
+      status: "ACTIVE",
+      // Permanently exclude any PGs with "xyz" in name
+      NOT: { name: { contains: "xyz", mode: "insensitive" } },
+    };
 
     if (city) {
       where.city = { slug: { contains: city, mode: "insensitive" } };
@@ -98,6 +102,9 @@ export async function GET(request: NextRequest) {
 
     // Merge databases
     let mergedPgs = [...mappedCustomPgs, ...dbPgs];
+
+    // Filter out any PGs with "xyz" in the name from all sources
+    mergedPgs = mergedPgs.filter(pg => !pg.name?.toLowerCase().includes("xyz"));
 
     // Apply filtering in JavaScript for JSON fallbacks
     if (ownerId) {
