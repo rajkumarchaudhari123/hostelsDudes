@@ -86,10 +86,15 @@ export async function GET(request: NextRequest) {
     const customPgs = getCustomPGs();
 
     // Map custom PGs to fit our API format
-    const mappedCustomPgs = customPgs.map(pg => ({
-      ...pg,
-      city: { name: "Pune", slug: "pune" }
-    }));
+    const mappedCustomPgs = customPgs.map(pg => {
+      const isNoida = pg.cityId === "noida";
+      return {
+        ...pg,
+        city: isNoida
+          ? { name: "Noida", slug: "noida" }
+          : { name: "Greater Noida", slug: "greater-noida" }
+      };
+    });
 
     // Merge databases
     let mergedPgs = [...mappedCustomPgs, ...dbPgs];

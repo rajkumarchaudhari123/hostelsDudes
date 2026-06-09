@@ -47,14 +47,8 @@ export const RENT_RANGES = [
 ] as const;
 
 export const POPULAR_CITIES = [
-  { name: "Pune", slug: "pune", image: "/cities/pune.jpg" },
-  { name: "Bangalore", slug: "bangalore", image: "/cities/bangalore.jpg" },
-  { name: "Mumbai", slug: "mumbai", image: "/cities/mumbai.jpg" },
-  { name: "Delhi", slug: "delhi", image: "/cities/delhi.jpg" },
-  { name: "Hyderabad", slug: "hyderabad", image: "/cities/hyderabad.jpg" },
-  { name: "Chennai", slug: "chennai", image: "/cities/chennai.jpg" },
-  { name: "Kolkata", slug: "kolkata", image: "/cities/kolkata.jpg" },
-  { name: "Jaipur", slug: "jaipur", image: "/cities/jaipur.jpg" },
+  { name: "Noida", slug: "noida", image: "https://images.unsplash.com/photo-1587907869105-a8597c91d76b?w=600&q=60" },
+  { name: "Greater Noida", slug: "greater-noida", image: "https://images.unsplash.com/photo-1596276122653-651a3898309f?w=600&q=60" },
 ] as const;
 
 export const DAYS_OF_WEEK = [
