@@ -175,12 +175,7 @@ export default function TrustSection() {
 
               {/* Stat */}
               <div className="relative z-10 mb-1">
-                <span
-                  className="text-3xl font-extrabold font-display"
-                  style={{
-                    background: `linear-gradient(135deg, var(--tw-gradient-from, #2563eb), var(--tw-gradient-to, #4f46e5))`,
-                  }}
-                >
+                <span className="text-3xl font-extrabold font-display text-blue-600">
                   {pillar.stat}
                 </span>
                 <span className="text-xs text-slate-400 font-medium ml-2">{pillar.statLabel}</span>

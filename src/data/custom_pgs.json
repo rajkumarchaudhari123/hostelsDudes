@@ -176,12 +176,12 @@
     "coverImage": "/galaxy_building.png"
   },
   {
-    "id": "pg-culture",
-    "ownerId": "SN-CULTURE-OWNER",
+    "id": "pg-chrome",
+    "ownerId": "SN-CHROME-OWNER",
     "cityId": "greater-noida",
-    "name": "Culture Hostel (Boys & Girls Hostel)",
-    "slug": "culture-hostel-boys-girls-greater-noida",
-    "description": "Culture Hostel offers only pure vegetarian buffet meals with a rich culinary journey. High-quality 4-times meal (Breakfast, Lunch, Evening Snacks, Dinner). Fully furnished box-beds, study tables, chairs, and mattresses. Unmatched facilities like AC, sanitized environment, free laundry, geyser, free Wi-Fi, gym, 24x7 security & CCTV, transport facility, doctor on call, and television on demand.",
+    "name": "The Chrome Hostel (Boys & Girls Hostel)",
+    "slug": "the-chrome-hostel-boys-girls-greater-noida",
+    "description": "The Chrome Hostel offers only pure vegetarian buffet meals with a rich culinary journey. High-quality 4-times meal (Breakfast, Lunch, Evening Snacks, Dinner). Fully furnished box-beds, study tables, chairs, and mattresses. Unmatched facilities like AC, sanitized environment, free laundry, geyser, free Wi-Fi, gym, 24x7 security & CCTV, transport facility, doctor on call, and television on demand.",
     "address": "C-12 & D-07 (Boys) / D-14/1 & A-11 (Girls), Knowledge Park-III, Greater Noida",
     "area": "Knowledge Park-III",
     "latitude": 28.4605,
@@ -213,11 +213,11 @@
     "hasHotWater": true,
     "hasTVRoom": true,
     "images": [
-      "/culture_building.png",
-      "/valiant_room.png",
-      "/valiant_bathroom.png"
+      "/chrome_corridor.png",
+      "/chrome_room1.png",
+      "/chrome_room2.png"
     ],
-    "coverImage": "/culture_building.png"
+    "coverImage": "/chrome_corridor.png"
   },
   {
     "id": "pg-sunhaven",
@@ -351,5 +351,49 @@
       "https://images.unsplash.com/photo-1505691938895-1758d7feb511?w=800&q=80"
     ],
     "coverImage": "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=800&q=80"
+  },
+  {
+    "id": "pg-royal",
+    "ownerId": "SN-ROYAL-OWNER",
+    "cityId": "greater-noida",
+    "name": "Royal Paradise (Boys & Girls Hostel)",
+    "slug": "royal-paradise-boys-girls-greater-noida",
+    "description": "Royal Paradise Boys & Girls Hostel: 'Stay Study Rise Discover'. We offer premium accommodations with double, triple, and four sharing options with AC or coolers. Facilities include high-speed Wi-Fi, unlimited laundry service, college pick & drop transport, physical fitness gym, TV & newspapers, weekly sanitation, RO drinking water, first aid, and 4-time hygienic meals (with college lunch delivery).",
+    "address": "Knowledge Park, Greater Noida",
+    "area": "Knowledge Park",
+    "latitude": 28.4620,
+    "longitude": 77.4935,
+    "gender": "ANY",
+    "status": "ACTIVE",
+    "featured": true,
+    "verified": true,
+    "minRent": 8000,
+    "maxRent": 13000,
+    "deposit": 8000,
+    "noticePeriod": 30,
+    "curfewTime": "10:30 PM",
+    "totalRooms": 75,
+    "availableRooms": 30,
+    "phone": "+91 97181 21214",
+    "whatsapp": "919718121214",
+    "rating": 4.8,
+    "reviewCount": 1,
+    "hasWifi": true,
+    "hasAC": true,
+    "hasFood": true,
+    "hasLaundry": true,
+    "hasSecurity": true,
+    "hasPowerBackup": true,
+    "hasCCTV": true,
+    "hasGym": true,
+    "hasAttachedBath": true,
+    "hasHotWater": true,
+    "hasTVRoom": true,
+    "images": [
+      "/royal_room1.png",
+      "/royal_dining.png",
+      "/royal_gym.png"
+    ],
+    "coverImage": "/royal_room1.png"
   }
 ]

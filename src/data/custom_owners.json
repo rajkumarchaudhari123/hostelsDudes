@@ -55,10 +55,10 @@
     "joinedAt": "2026-06-08T13:57:30.000Z"
   },
   {
-    "id": "owner-culture",
-    "adminId": "SN-CULTURE-OWNER",
-    "name": "Culture Owner",
-    "email": "culture@hostelsdudes.in",
+    "id": "owner-chrome",
+    "adminId": "SN-CHROME-OWNER",
+    "name": "Chrome Owner",
+    "email": "chrome@hostelsdudes.in",
     "phone": "9560522902",
     "password": "admin",
     "pgCount": 1,
@@ -97,5 +97,16 @@
     "pgCount": 1,
     "status": "ACTIVE",
     "joinedAt": "2026-06-08T14:06:06.000Z"
+  },
+  {
+    "id": "owner-royal",
+    "adminId": "SN-ROYAL-OWNER",
+    "name": "Royal Paradise Owner",
+    "email": "royal@hostelsdudes.in",
+    "phone": "9718121214",
+    "password": "admin",
+    "pgCount": 1,
+    "status": "ACTIVE",
+    "joinedAt": "2026-06-08T22:02:04.000Z"
   }
 ]
